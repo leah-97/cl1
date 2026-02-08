@@ -1790,12 +1790,12 @@ footer > div:nth-child(2) ul li a:hover {
 
   /*visual하단 글씨*/
   .visualwrodWrap {
+    position: absolute;
+    bottom: 12dvh; /* % 대신 dvh로 변경 */
+    left: 0;
     width: 100%;
-    height: 50%;
-    position: relative;
     z-index: 10;
-    margin-top: 400px;
-    padding: 120px 80px;
+    padding: 0 5vw; /* 80px 대신 vw로 */
     box-sizing: border-box;
     color: #fff;
   }
@@ -1805,8 +1805,8 @@ footer > div:nth-child(2) ul li a:hover {
     color: #fff;
     font-weight: normal;
     position: absolute;
-    left: 50px;
-    top: 200px;
+    left: 5vw;
+    bottom: 0;
     transition: 1s;
     width: 80%;
   }
@@ -1859,8 +1859,8 @@ footer > div:nth-child(2) ul li a:hover {
     width: 50%;
     gap: 40px;
     position: absolute;
-    bottom: 50px;
-    left: 50px;
+    bottom: 2dvh;
+    left: 5vw;
   }
   .barWrap li {
     width: calc(100% / 3);
@@ -3333,7 +3333,7 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual하단 글씨*/
   .visualwrodWrap {
     position: absolute;
-    bottom: 12dvh;
+    bottom: 13dvh;
     left: 0;
     width: 100%;
     padding: 0 5vw;
@@ -3347,10 +3347,10 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual 프로그래스 바*/
   .barWrap {
     display: flex;
-    width: 35%;
+    width: 50%;
     gap: 40px;
     position: absolute;
-    bottom: 2dvh;
+    bottom: 5dvh;
     left: 50px;
   }
   .barWrap li {
@@ -4048,7 +4048,7 @@ footer > div:nth-child(2) ul li a:hover {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    height: 60px;
+    height: 50px;
     width: 20%;
     border: 1px solid #fff;
     border-radius: 10px;
@@ -4104,7 +4104,7 @@ footer > div:nth-child(2) ul li a:hover {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    height: 55px;
+    height: 50px;
     width: 15%;
     min-width: 85px;
     border-radius: 10px;
