@@ -3948,14 +3948,18 @@ footer > div:nth-child(2) ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0px;
+    padding: 5%;
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     z-index: 10;
     box-sizing: border-box;
+    display: flex;
   }
   .sec3conbox {
     padding: 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .section3 .rolling {
     display: flex;
@@ -3983,7 +3987,7 @@ footer > div:nth-child(2) ul li a:hover {
     justify-content: space-between;
     margin-top: 0 !important;
     gap: 20px;
-    height: 700px;
+    height: 75%;
   }
   .section3 ul li {
     display: flex;
@@ -3993,7 +3997,7 @@ footer > div:nth-child(2) ul li a:hover {
   /*section3 box li*/
   .section3 li:first-child {
     width: 100%;
-    height: 45%;
+    height: 40%;
     background-image: url("../img/main_banner_li01_bg2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -4005,7 +4009,7 @@ footer > div:nth-child(2) ul li a:hover {
   }
   .section3 li:nth-child(2) {
     width: 100%;
-    height: 45%;
+    height: 40%;
     background-image: url("../img/main_banner_li02_bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
