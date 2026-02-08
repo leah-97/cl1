@@ -20,10 +20,11 @@ $(function () {
 
     lastScroll = currentScroll;
   });
-
-  window.addEventListener("load", function () {
-    const video = document.querySelector(".sec2videoWrap video");
-    video?.play();
+  $(window).on("load", function () {
+    $("video").each(function () {
+      this.muted = true;
+      this.play().catch((err) => console.log("Video play failed:", err));
+    });
   });
   $(".mainMenu > nav > ul").mouseenter(function () {
     $(".subBg").stop().slideDown(300);
