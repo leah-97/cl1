@@ -1,0 +1,1394 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>더 플래티넘 클론코딩</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"
+      integrity="sha512-i8BU+cmsrlyKOPFSCdO4x4wHXvjg6YIXy6K/PsPL0/3F89ccSgk06wDBP5FTyiGDzVNADQhal1dA1DHH2JB0Rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!--슬라이드 메뉴-->
+
+      <div class="slideMenu">
+        <div class="slideTop">
+          <div>
+            <button>로그인</button>
+            <button>회원가입</button>
+          </div>
+          <div class="close2">
+            <img
+              src="img/platinum_on_layer_popup_close_btn.svg"
+              alt="닫기버튼"
+            />
+          </div>
+        </div>
+        <div class="sldieMid">
+          <ul>
+            <li class="active">
+              <a href="#">단지정보</a>
+              <ul class="slideSub">
+                <li>
+                  <a href="#"> 통합캘린더 </a>
+                </li>
+                <li>
+                  <a href="#"> 분양단지 </a>
+                </li>
+                <li>
+                  <a href="#"> 공사단지 </a>
+                </li>
+                <li>
+                  <a href="#">입주단지 </a>
+                </li>
+                <li>
+                  <a href="#"> 상가정보 </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">브랜드</a>
+              <ul class="slideSub">
+                <li>
+                  <a href="#"> 브랜드스토리 </a>
+                </li>
+                <li>
+                  <a href="#">뉴스·미디어 </a>
+                  <ul class="slideSub2">
+                    <li>
+                      <a href="#">뉴스</a>
+                      <a href="#">미디어</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"> 수상실적 </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">리모델링</a>
+              <ul class="slideSub">
+                <li>
+                  <a href="#"> 리모델링 </a>
+                </li>
+                <li>
+                  <a href="#">리모델링 추진 절차 </a>
+                </li>
+                <li>
+                  <a href="#"> 주요실적 </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객서비스</a>
+              <ul class="slideSub">
+                <li>
+                  <a href="#"> 고객문의 </a>
+                  <ul class="slideSub2">
+                    <li>
+                      <a href="#">자주 묻는 질문</a>
+                      <a href="#">온라인 문의</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">A/S센터 </a>
+                  <ul class="slideSub2">
+                    <li>
+                      <a href="#">A/S 안내</a>
+                      <a href="#">A/S 센터 안내</a>
+                      <a href="#">A/S 신청</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"> 예약 서비스 </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">마이페이지</a>
+              <ul class="slideSub">
+                <li>
+                  <a href="#"> 나의 단지 정보 </a>
+                </li>
+                <li>
+                  <a href="#"> 나의 예약 내역 </a>
+                </li>
+                <li>
+                  <a href="#"> 나의 문의 내역 </a>
+                  <ul class="slideSub2">
+                    <li>
+                      <a href="#">나의 문의 내역</a>
+                      <a href="#">A/S 문의 내역</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">중도급납입조회 </a>
+                </li>
+                <li>
+                  <a href="#"> 나의 정보 관리 </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="subImg">
+          <span> 문의하기 </span>
+          <p>궁금하신 사항이 있으신가요?</p>
+        </div>
+        <div class="slideBot">
+          <img src="img/ss_logo_color.svg" class="Slogo" alt="로고" />
+          <img src="img/main_complex_next_btn.svg" class="Sarr" alt="화살표" />
+        </div>
+      </div>
+      <div class="visual">
+        <div class="visualbg">
+          <ul class="visualSlides">
+            <li class="on">
+              <video
+                src="img/c888941056994c00a224c9689d6b7be2.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </li>
+            <li>
+              <img src="img/ad3ee2021e5d48b3a185fd90d033c0a2.jpg" alt="배경" />
+            </li>
+            <li>
+              <img src="img/18295ff4aada42ada4deef26156cefc6.jpg" alt="배경" />
+            </li>
+          </ul>
+        </div>
+        <!--헤더-->
+        <header>
+          <div class="mainMenu">
+            <h1>
+              <a href="#"><img src="img/logo_white.png" alt="로고" /></a>
+            </h1>
+            <nav>
+              <ul>
+                <li><a href="#">단지정보</a></li>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">리모델링</a></li>
+                <li><a href="#">고객서비스</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </nav>
+            <div class="headerRight">
+              <div>
+                <a href="#"
+                  ><img src="img/header_cal_btn_white.svg" alt="아이콘"
+                /></a>
+              </div>
+              <div>
+                <a href="#"
+                  ><img src="img/header_login_btn_white.svg" alt="아이콘"
+                /></a>
+              </div>
+              <button>쌍용건설</button>
+            </div>
+            <div class="headerRight2">
+              <img src="img/menu_open_btn_white.svg" alt="메뉴바" />
+            </div>
+          </div>
+          <div class="subBg">
+            <div class="submenuWrap">
+              <div class="submenu">
+                <nav>
+                  <ul>
+                    <li>
+                      <ul>
+                        <li><a href="#">통합캘린더</a></li>
+                        <li><a href="#">분양단지</a></li>
+                        <li><a href="#">공사단지</a></li>
+                        <li><a href="#">입주단지</a></li>
+                        <li><a href="#">상가정보</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">브랜드스토리</a></li>
+                        <li><a href="#">뉴스·미디어</a></li>
+                        <li><a href="#">수상실적</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">리모델링</a></li>
+                        <li><a href="#">리모델링 추진 절차</a></li>
+                        <li><a href="#">주요실적</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">고객문의</a></li>
+                        <li><a href="#">A/S센터</a></li>
+                        <li><a href="#">예약서비스</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">나의 단지 정보</a></li>
+                        <li><a href="#">나의 예약 내역</a></li>
+                        <li><a href="#">나의 문의 내역</a></li>
+                        <li><a href="#">중도금납입조회</a></li>
+                        <li><a href="#">나의 정보 관리</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="submenuImg">
+                  <span>문의하기</span>
+                  <p>궁금하신 사항이<br />있으신가요?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!--비주얼 하단 글씨-->
+        <div class="visualwrodWrap">
+          <ul class="visualWord">
+            <li class="on">
+              <h3>최적의 삶을 위해 건설 전문가가 세심하게 엄선한 주거 공간</h3>
+              <h2>Fine Tuned Life Space</h2>
+              <button>브랜드스토리</button>
+            </li>
+            <li>
+              <h3>여수 하늘을 품은 최중심 35층 스카이 랜드마크</h3>
+              <h2>더 플래티넘 여수35</h2>
+              <button>
+                <img
+                  src="img/main_visual_btn_home_icon_white.svg"
+                  alt="아이콘"
+                />분양 홈페이지
+              </button>
+            </li>
+            <li>
+              <h3>
+                새로운 서면의 맨 앞 자리, 미래 부산 프리미엄의 기준이 될 더
+                플래티넘 라이프
+              </h3>
+              <h2>쌍용 더 플래티넘 서면</h2>
+              <button>
+                <img
+                  src="img/main_visual_btn_home_icon_white.svg"
+                  alt="아이콘"
+                />분양 홈페이지
+              </button>
+            </li>
+          </ul>
+          <!--비주얼 프로그래스 바-->
+          <ul class="barWrap">
+            <li class="on">
+              <div class="probar1"><div></div></div>
+              <h3>더 플래티넘 브랜드스토리</h3>
+            </li>
+            <li>
+              <div class="probar1"><div></div></div>
+              <h3>더 플래티넘 여수35</h3>
+            </li>
+            <li>
+              <div class="probar1"><div></div></div>
+              <h3>쌍용 더 플래티넘 서면</h3>
+            </li>
+          </ul>
+          <button class="visualBtn">
+            <span> PLATINUM ON</span><i class="fa-solid fa-angle-up"></i>
+          </button>
+          <div class="visualHide">
+            <div>
+              <div class="visualhideTop">
+                <p>PLATINUM ON</p>
+                <img
+                  src="img/platinum_on_layer_popup_close_btn.svg"
+                  alt="닫기버튼"
+                />
+              </div>
+              <div class="visualhideBot">
+                <div class="bg">
+                  <a href="#">
+                    <p>
+                      홈페이지 로그인하시면<br />
+                      고객님의 맞춤 정보를 확인하실 수 있습니다.
+                    </p>
+                    <button>
+                      <span>
+                        로그인<img
+                          src="img/main_complex_next_btn.svg"
+                          alt="화살표"
+                        />
+                      </span>
+                    </button>
+                  </a>
+                </div>
+                <div class="visit">
+                  <p>
+                    <i class="fa-solid fa-circle-info"></i>최근 방문한 단지가
+                    없습니다.
+                  </p>
+                </div>
+                <div class="last">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <span>통합캘린더</span
+                        ><span>
+                          <img src="img/main_complex_next_btn.svg" alt="화살표"
+                        /></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>브랜드스토리</span>
+                        <span>
+                          <img src="img/main_complex_next_btn.svg" alt="화살표"
+                        /></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>고객문의</span>
+                        <span>
+                          <img src="img/main_complex_next_btn.svg" alt="화살표"
+                        /></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--컨테이너-->
+      <div id="container">
+        <div class="section1">
+          <!--section1-->
+          <div class="rolling">
+            <div class="bgWord">
+              <span>FINE TUNED LIFE SPACE</span>
+              <img src="img/main_complex_rolling_icon.svg" />
+            </div>
+            <div class="bgWord">
+              <span>FINE TUNED LIFE SPACE</span>
+              <img src="img/main_complex_rolling_icon.svg" />
+            </div>
+            <div class="bgWord">
+              <span>FINE TUNED LIFE SPACE</span>
+              <img src="img/main_complex_rolling_icon.svg" />
+            </div>
+            <div class="bgWord">
+              <span>FINE TUNED LIFE SPACE</span>
+              <img src="img/main_complex_rolling_icon.svg" />
+            </div>
+            <div class="bgWord">
+              <span>FINE TUNED LIFE SPACE</span>
+              <img src="img/main_complex_rolling_icon.svg" />
+            </div>
+          </div>
+          <div class="swiperWrap">
+            <ul>
+              <li class="card-1">
+                <div>
+                  <span>분양중</span>
+                  <h3>쌍용 더 플래티넘 서면</h3>
+                  <p>부산광역시 부산진구 신천대로 155(부전동)</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+              <li class="card-2">
+                <div>
+                  <span>분양중</span>
+                  <h3>쌍용 더 플래티넘 동래 아시아드</h3>
+                  <p>부산광역시 동래구 온천동 1370-1번지 일원</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+              <li class="card-3">
+                <div>
+                  <span>분양중</span>
+                  <h3>더 플래티넘 스카이헤론</h3>
+                  <p>경기도 평택시 통복동 108-3번지 일원</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+              <li class="card-4">
+                <div>
+                  <span>분양중</span>
+                  <h3>쌍용 더 플래티넘 스카이</h3>
+                  <p>강원특별자치도 춘천시 약사동 150-10 번지 일원</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+              <li class="card-5">
+                <div>
+                  <span>분양중</span>
+                  <h3>
+                    지제역 반도체밸리 쌍용 더<br />
+                    플래티넘
+                  </h3>
+                  <p>평택 가재지구 1블럭 공동주택 일원</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+              <li class="card-6">
+                <div>
+                  <span>분양중</span>
+                  <h3>쌍용 더 플래티넘 네이처</h3>
+                  <p>대전광역시 대덕구 읍내동 51-9 번지 일원</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+              <li class="card-7">
+                <div>
+                  <span>분양중</span>
+                  <h3>쌍용 더 플래티넘 여수 35</h3>
+                  <p>전라남도 여수시 학동 74번지 일원</p>
+                  <span>
+                    <a href="#">
+                      <img
+                        src="img/main_visual_btn_home_icon_white.svg"
+                        alt="아이콘" /></a
+                  ></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="bot2">
+            <ul>
+              <li>
+                <span class="cir">
+                  <img src="img/main_complex_prev_btn.svg" alt="화살표"
+                /></span>
+              </li>
+              <li>
+                <span>1</span>
+                <div class="bar2">
+                  <div></div>
+                </div>
+                <span>7</span>
+              </li>
+              <li>
+                <span class="cir">
+                  <img src="img/main_complex_next_btn.svg" alt="화살표"
+                /></span>
+              </li>
+            </ul>
+            <div class="btnWrap">
+              <button>통합캘린더</button>
+              <button>분양단지</button>
+            </div>
+          </div>
+        </div>
+        <div class="section2">
+          <div class="gw">
+            <!--section2 svg-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 546 112"
+              width="546"
+              height="112"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <clipPath id="__lottie_element_2">
+                  <rect width="546" height="112" x="0" y="0"></rect>
+                </clipPath>
+                <g id="__lottie_element_3">
+                  <g
+                    id="41"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="7"
+                        d=" M274,-37.75 C274,-37.75 249.14700317382812,-3.997999906539917 246.25,0.5 C236.75,15.25 183,51 202,27.25 C221,3.5 231.75,0 236.5,-0.75 C241.25,-1.5 249.61500549316406,0.16300000250339508 239,20.75 C230.94200134277344,36.37699890136719 240.05499267578125,41.27199935913086 244.677001953125,41.724998474121094"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_3_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_3"></use>
+                </mask>
+                <g id="__lottie_element_9">
+                  <g
+                    id="40"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,529.5,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M-80.5,16.875 C-80.5,16.875 -64,22.5 -57,6.25 C-50,-10 -71.5,2 -71.75,2 C-72,2 -99.25,26.5 -90,32.25 C-80.75,38 -56,24.5 -56,24.5"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_9_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_9"></use>
+                </mask>
+                <g id="__lottie_element_15">
+                  <g
+                    id="38"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,529.5,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M-120.75,0.25 C-120.75,0.25 -143,35 -143,35 C-143,35 -98.5,4 -98.5,4 C-98.5,4 -118,37 -102.5,32.5 C-87,28 -82.5,20 -82.5,20"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_15_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_15"></use>
+                </mask>
+                <g id="__lottie_element_21">
+                  <g
+                    id="36"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M88.75,-11.25 C88.75,-11.25 48.75,34 61.25,34.5 C73.75,35 112.5,-0.25 112.5,-0.25 C112.5,-0.25 88.75,32.25 87.5,37.5 C86.25,42.75 120.25,19.5 132.75,19"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_21_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_21"></use>
+                </mask>
+                <g id="__lottie_element_27">
+                  <g
+                    id="33"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="8"
+                        d=" M-17,-14.25 C-17,-14.25 -37.75,-29.75 -25.5,-41.25 C-13.25,-52.75 27.25,-42.75 40.75,-37.25 C54.25,-31.75 80,-20.75 80,-20.75 C80,-20.75 95,-15.5 94,-24.75 C93,-34 83,-35.5 79.5,-36.25 C76,-37 66.75,-31.25 60,-17 C53.25,-2.75 24.25,52.5 -3.25,46 C-30.75,39.5 -37.75,12.75 -10.25,4.5"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_27_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_27"></use>
+                </mask>
+                <g id="__lottie_element_33">
+                  <g
+                    id="32"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M-80.5,16.875 C-80.5,16.875 -64,22.5 -57,6.25 C-50,-10 -71.5,2 -71.75,2 C-72,2 -99.25,26.5 -90,32.25 C-80.75,38 -56,24.5 -56,24.5"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_33_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_33"></use>
+                </mask>
+                <g id="__lottie_element_39">
+                  <g
+                    id="31"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M-120.75,0.25 C-120.75,0.25 -143,35 -143,35 C-143,35 -98.5,4 -98.5,4 C-98.5,4 -118,37 -102.5,32.5 C-87,28 -82.5,20 -82.5,20"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_39_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_39"></use>
+                </mask>
+                <g id="__lottie_element_45">
+                  <g
+                    id="30"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,-0.25,0)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M-136.25,-34.25 C-136.25,-34.25 -145.19500732421875,-15.49899959564209 -145.19500732421875,-15.49899959564209 C-145.19500732421875,-15.49899959564209 -145.4080047607422,-5.377999782562256 -145.4080047607422,-5.377999782562256 C-145.4080047607422,-5.377999782562256 -152.7050018310547,6.2270002365112305 -152.7050018310547,6.2270002365112305 C-152.7050018310547,6.2270002365112305 -173.25,35.5 -173.25,35.5 C-173.25,35.5 -137,21 -137,21"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_45_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_45"></use>
+                </mask>
+                <g id="__lottie_element_51">
+                  <g
+                    id="35"
+                    style="display: block"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,-0.25)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="9"
+                        d=" M-224.375,4 C-210.93699645996094,0.6869999766349792 -209.58099365234375,1.8980000019073486 -190.50799560546875,2.8980000019073486 C-176.29800415039062,3.6440000534057617 -167.60899353027344,3.7109999656677246 -158.75,2.75"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_51_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_51"></use>
+                </mask>
+                <g id="__lottie_element_57">
+                  <g
+                    id="28"
+                    transform="matrix(1,0,0,1,273,56)"
+                    opacity="1"
+                    style="display: block"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,-0.25)">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill-opacity="0"
+                        stroke="rgb(93,38,231)"
+                        stroke-opacity="1"
+                        stroke-width="7"
+                        d=" M-258.25,-12.25 C-258.25,-12.25 -287.35101318359375,-33.564998626708984 -258.25,-43.75 C-239.79299926757812,-50.209999084472656 -204.30999755859375,-37.334999084472656 -179.98699951171875,-27.781999588012695 C-171.36500549316406,-24.395000457763672 -161.9600067138672,-21.20800018310547 -158.25,-19.75 C-144.25,-14.25 -135.08200073242188,-30.09600067138672 -160.75,-35.5 C-174.3419952392578,-38.36199951171875 -181,-14 -194.10499572753906,8.04699993133545 C-203.927001953125,24.57200050354004 -216.25999450683594,40.08000183105469 -238.5,44.25 C-276.09600830078125,51.29899978637695 -275.5,10.5 -249.75,4"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <mask id="__lottie_element_57_1" mask-type="alpha">
+                  <use xlink:href="#__lottie_element_57"></use>
+                </mask>
+              </defs>
+              <g clip-path="url(#__lottie_element_2)">
+                <g mask="url(#__lottie_element_57_1)" style="display: block">
+                  <g id="19" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,65.25399780273438,47.73899841308594)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-36.959999084472656,46.7599983215332 C-44.053001403808594,46.7599983215332 -50.2130012512207,44.33300018310547 -55.439998626708984,39.47999954223633 C-60.7599983215332,34.720001220703125 -63.41999816894531,29.21299934387207 -63.41999816894531,22.959999084472656 C-63.41999816894531,17.547000885009766 -61.41299819946289,12.972999572753906 -57.400001525878906,9.239999771118164 C-54.31999969482422,6.252999782562256 -51.053001403808594,4.572999954223633 -47.599998474121094,4.199999809265137 C-47.599998474121094,4.199999809265137 -47.03900146484375,4.199999809265137 -47.03900146484375,4.199999809265137 C-46.292999267578125,4.199999809265137 -45.91899871826172,4.340000152587891 -45.91899871826172,4.619999885559082 C-45.91899871826172,5.2729997634887695 -46.7130012512207,5.739999771118164 -48.29899978637695,6.019999980926514 C-50.632999420166016,6.39300012588501 -52.82600021362305,8.119999885559082 -54.880001068115234,11.199999809265137 C-55.90599822998047,12.972999572753906 -56.792999267578125,14.88700008392334 -57.540000915527344,16.940000534057617 C-58.19300079345703,18.899999618530273 -58.52000045776367,21.047000885009766 -58.52000045776367,23.3799991607666 C-58.52000045776367,28.700000762939453 -56.279998779296875,33.459999084472656 -51.79899978637695,37.65999984741211 C-46.94599914550781,42.32699966430664 -41.25299835205078,44.472999572753906 -34.71900177001953,44.099998474121094 C-19.319000244140625,42.887001037597656 -5.50600004196167,32.20000076293945 6.7210001945495605,12.039999961853027 C7.374000072479248,11.107000350952148 8.119999885559082,9.987000465393066 8.961000442504883,8.680000305175781 C9.800999641418457,7.28000020980835 10.734000205993652,5.646999835968018 11.76099967956543,3.7799999713897705 C11.746000289916992,2.760999917984009 13.300999641418457,1.2599999904632568 13.300999641418457,1.2599999904632568 C16.006999969482422,-3.312999963760376 18.479999542236328,-7.513000011444092 20.72100067138672,-11.34000015258789 C23.054000854492188,-15.260000228881836 25.15399932861328,-18.85300064086914 27.020999908447266,-22.1200008392334 C27.020999908447266,-22.1200008392334 28.840999603271484,-25.059999465942383 28.840999603271484,-25.059999465942383 C-6.065999984741211,-37.472999572753906 -29.632999420166016,-43.68000030517578 -41.85900115966797,-43.68000030517578 C-46.99300003051758,-43.68000030517578 -51.33300018310547,-42.70000076293945 -54.880001068115234,-40.7400016784668 C-58.893001556396484,-38.6870002746582 -60.900001525878906,-35.70000076293945 -60.900001525878906,-31.780000686645508 C-60.900001525878906,-28.700000762939453 -60.01300048828125,-25.71299934387207 -58.2400016784668,-22.81999969482422 C-58.2400016784668,-22.81999969482422 -53.19900131225586,-15.960000038146973 -53.19900131225586,-15.960000038146973 C-52.82600021362305,-15.586999893188477 -52.638999938964844,-15.166999816894531 -52.638999938964844,-14.699999809265137 C-52.638999938964844,-14.232999801635742 -52.87300109863281,-14 -53.3390007019043,-14 C-54.18000030517578,-14 -54.92599868774414,-14.467000007629395 -55.58000183105469,-15.399999618530273 C-56.60599899291992,-16.613000869750977 -57.58599853515625,-17.780000686645508 -58.52000045776367,-18.899999618530273 C-59.452999114990234,-20.020000457763672 -60.38600158691406,-21.187000274658203 -61.31999969482422,-22.399999618530273 C-63.37300109863281,-25.292999267578125 -64.4000015258789,-28.420000076293945 -64.4000015258789,-31.780000686645508 C-64.4000015258789,-36.540000915527344 -62.02000045776367,-40.31999969482422 -57.2599983215332,-43.119998931884766 C-52.87300109863281,-45.547000885009766 -47.69300079345703,-46.7599983215332 -41.71900177001953,-46.7599983215332 C-40.972999572753906,-46.7599983215332 -40.27299880981445,-46.7130012512207 -39.61899948120117,-46.619998931884766 C-38.87300109863281,-46.619998931884766 -38.125999450683594,-46.573001861572266 -37.380001068115234,-46.47999954223633 C-28.326000213623047,-45.547000885009766 -18.05900001525879,-43.632999420166016 -6.578999996185303,-40.7400016784668 C4.99399995803833,-37.939998626708984 17.82699966430664,-34.207000732421875 31.92099952697754,-29.540000915527344 C36.680999755859375,-35.233001708984375 41.67399978637695,-38.08000183105469 46.900001525878906,-38.08000183105469 C50.540000915527344,-38.08000183105469 54.367000579833984,-36.49300003051758 58.380001068115234,-33.31999969482422 C62.39400100708008,-30.14699935913086 64.4000015258789,-27.15999984741211 64.4000015258789,-24.360000610351562 C64.4000015258789,-19.413000106811523 61.55400085449219,-16.940000534057617 55.86000061035156,-16.940000534057617 C54.64699935913086,-16.940000534057617 53.387001037597656,-17.033000946044922 52.08000183105469,-17.219999313354492 C50.867000579833984,-17.406999588012695 49.560001373291016,-17.732999801635742 48.15999984741211,-18.200000762939453 C46.57400131225586,-18.85300064086914 44.56700134277344,-19.600000381469727 42.13999938964844,-20.440000534057617 C39.80699920654297,-21.280000686645508 37.00699996948242,-22.260000228881836 33.74100112915039,-23.3799991607666 C33.64699935913086,-23.006999969482422 32.946998596191406,-21.746999740600586 31.641000747680664,-19.600000381469727 C29.1200008392334,-14.932999610900879 26.881000518798828,-10.82699966430664 24.92099952697754,-7.28000020980835 C22.961000442504883,-3.8269999027252197 21.2810001373291,-0.8870000243186951 19.881000518798828,1.5399999618530273 C19.881000518798828,1.5399999618530273 18.479999542236328,3.9200000762939453 18.479999542236328,3.9200000762939453 C17.547000885009766,5.506999969482422 16.566999435424805,7.186999797821045 15.541000366210938,8.960000038146973 C14.513999938964844,10.640000343322754 13.347000122070312,12.413000106811523 12.041000366210938,14.279999732971191 C6.626999855041504,22.493000030517578 0.18700000643730164,29.493000030517578 -7.2789998054504395,35.279998779296875 C-17.07900047302246,42.93299865722656 -26.972999572753906,46.7599983215332 -36.959999084472656,46.7599983215332z M57.680999755859375,-21.559999465942383 C60.013999938964844,-21.559999465942383 61.18000030517578,-22.493000030517578 61.18000030517578,-24.360000610351562 C61.18000030517578,-26.413000106811523 59.547000885009766,-28.84000015258789 56.279998779296875,-31.639999389648438 C53.387001037597656,-34.25299835205078 50.867000579833984,-35.560001373291016 48.720001220703125,-35.560001373291016 C44.61399841308594,-35.560001373291016 40.64699935913086,-32.99300003051758 36.81999969482422,-27.860000610351562 C36.81999969482422,-27.860000610351562 49,-23.65999984741211 49,-23.65999984741211 C53.106998443603516,-22.260000228881836 56.000999450683594,-21.559999465942383 57.680999755859375,-21.559999465942383z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_51_1)" style="display: block">
+                  <g id="34" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,65.25399780273438,47.73899841308594)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M11.76099967956543,3.7799999713897705 C-2.8929998874664307,3.687000036239624 -11.666000366210938,4.10699987411499 -14.559000015258789,5.039999961853027 C-14.746000289916992,5.132999897003174 -14.932999610900879,5.179999828338623 -15.119000434875488,5.179999828338623 C-15.678999900817871,5.179999828338623 -15.960000038146973,4.7129998207092285 -15.960000038146973,3.7799999713897705 C-15.960000038146973,1.4470000267028809 -15.072999954223633,0.2329999953508377 -13.298999786376953,0.14000000059604645 C-12.460000038146973,0.14000000059604645 -11.33899974822998,-0.2329999953508377 -9.939000129699707,-0.9800000190734863 C-8.446000099182129,-1.8200000524520874 -7.232999801635742,-2.240000009536743 -6.298999786376953,-2.240000009536743 C-5.926000118255615,-2.240000009536743 -5.460000038146973,-1.8669999837875366 -4.89900016784668,-1.1200000047683716 C-4.433000087738037,-0.2800000011920929 -4.059000015258789,0.14000000059604645 -3.7790000438690186,0.14000000059604645 C-3.872999906539917,0.14000000059604645 -3.6389999389648438,0.18700000643730164 -3.0789999961853027,0.2800000011920929 C-2.4260001182556152,0.2800000011920929 -1.3530000448226929,0.3269999921321869 0.14100000262260437,0.41999998688697815 C0.14100000262260437,0.41999998688697815 13.300999641418457,1.2599999904632568 13.300999641418457,1.2599999904632568 C15.746000289916992,0.7609999775886536 18.496000289916992,1.1360000371932983 19.881000518798828,1.5399999618530273 C19.881000518798828,1.5399999618530273 22.400999069213867,1.5399999618530273 22.400999069213867,1.5399999618530273 C34.534000396728516,1.5399999618530273 41.81399917602539,1.1670000553131104 44.2400016784668,0.41999998688697815 C44.33399963378906,0.3269999921321869 44.61399841308594,0.2800000011920929 45.08000183105469,0.2800000011920929 C45.63999938964844,0.2800000011920929 45.91999816894531,0.5600000023841858 45.91999816894531,1.1200000047683716 C45.91999816894531,2.427000045776367 45.08000183105469,3.1730000972747803 43.400001525878906,3.359999895095825 C40.7869987487793,3.546999931335449 37.84700012207031,3.687000036239624 34.58100128173828,3.7799999713897705 C31.31399917602539,3.872999906539917 27.673999786376953,3.9200000762939453 23.660999298095703,3.9200000762939453 C23.660999298095703,3.9200000762939453 18.479999542236328,3.9200000762939453 18.479999542236328,3.9200000762939453 C15.746000289916992,4.261000156402588 14.121000289916992,4.011000156402588 11.76099967956543,3.7799999713897705z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_45_1)" style="display: block">
+                  <g id="20" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,115.24199676513672,53.619998931884766)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-16.65999984741211,31.079999923706055 C-17.593000411987305,31.079999923706055 -18.059999465942383,30.799999237060547 -18.059999465942383,30.239999771118164 C-18.059999465942383,29.959999084472656 -17.920000076293945,29.632999420166016 -17.639999389648438,29.260000228881836 C-16.89299964904785,28.047000885009766 -16.05299949645996,26.739999771118164 -15.119999885559082,25.34000015258789 C-14.093000411987305,23.940000534057617 -13.067000389099121,22.493000030517578 -12.039999961853027,21 C-11.012999534606934,19.413000106811523 -9.892999649047852,17.780000686645508 -8.680000305175781,16.100000381469727 C-7.373000144958496,14.32699966430664 -6.066999912261963,12.460000038146973 -4.760000228881836,10.5 C-3.0799999237060547,8.166999816894531 -2.006999969482422,6.159999847412109 -1.5399999618530273,4.480000019073486 C-1.4470000267028809,4.10699987411499 -1.399999976158142,3.7330000400543213 -1.399999976158142,3.359999895095825 C-1.399999976158142,2.8929998874664307 -1.3530000448226929,2.4730000495910645 -1.2599999904632568,2.0999999046325684 C-1.2599999904632568,2.0999999046325684 -0.8399999737739563,-0.2800000011920929 -0.8399999737739563,-0.2800000011920929 C-0.652999997138977,-1.1200000047683716 1.1670000553131104,-2.2869999408721924 4.619999885559082,-3.7799999713897705 C7.139999866485596,-4.993000030517578 9.100000381469727,-5.599999904632568 10.5,-5.599999904632568 C11.246999740600586,-5.599999904632568 11.527000427246094,-5.320000171661377 11.34000015258789,-4.760000228881836 C10.687000274658203,-2.5199999809265137 9.192999839782715,0.18700000643730164 6.860000133514404,3.359999895095825 C6.860000133514404,3.359999895095825 0,12.739999771118164 0,12.739999771118164 C-0.8399999737739563,13.95300006866455 -1.9600000381469727,15.399999618530273 -3.359999895095825,17.079999923706055 C-4.666999816894531,18.66699981689453 -6.206999778747559,20.62700080871582 -7.980000019073486,22.959999084472656 C-7.793000221252441,22.867000579833984 -7.420000076293945,22.726999282836914 -6.860000133514404,22.540000915527344 C-6.206999778747559,22.260000228881836 -5.367000102996826,21.933000564575195 -4.340000152587891,21.559999465942383 C-3.312999963760376,21.187000274658203 -2.052999973297119,20.767000198364258 -0.5600000023841858,20.299999237060547 C0.9330000281333923,19.739999771118164 2.7070000171661377,19.132999420166016 4.760000228881836,18.479999542236328 C6.066999912261963,18.01300048828125 7.699999809265137,17.5 9.65999984741211,16.940000534057617 C11.619999885559082,16.28700065612793 13.95300006866455,15.633000373840332 16.65999984741211,14.979999542236328 C17.219999313354492,14.979999542236328 17.5,15.260000228881836 17.5,15.819999694824219 C17.5,15.819999694824219 17.5,16.100000381469727 17.5,16.100000381469727 C17.5,16.472999572753906 17.219999313354492,16.753000259399414 16.65999984741211,16.940000534057617 C3.687000036239624,20.39299964904785 -6.300000190734863,24.732999801635742 -13.300000190734863,29.959999084472656 C-14.32699966430664,30.707000732421875 -15.446999549865723,31.079999923706055 -16.65999984741211,31.079999923706055z M12.739999771118164,-23.3799991607666 C12.27299976348877,-23.3799991607666 11.807000160217285,-23.753000259399414 11.34000015258789,-24.5 C10.873000144958496,-25.34000015258789 10.640000343322754,-25.993000030517578 10.640000343322754,-26.459999084472656 C10.640000343322754,-27.207000732421875 11.0600004196167,-27.906999588012695 11.899999618530273,-28.559999465942383 C12.739999771118164,-29.30699920654297 13.67300033569336,-29.913000106811523 14.699999809265137,-30.3799991607666 C15.819999694824219,-30.847000122070312 16.65999984741211,-31.079999923706055 17.219999313354492,-31.079999923706055 C17.780000686645508,-31.079999923706055 18.059999465942383,-30.940000534057617 18.059999465942383,-30.65999984741211 C18.059999465942383,-30.19300079345703 17.920000076293945,-29.68000030517578 17.639999389648438,-29.1200008392334 C17.452999114990234,-28.652999877929688 17.12700080871582,-28.047000885009766 16.65999984741211,-27.299999237060547 C16.19300079345703,-26.739999771118164 15.77299976348877,-25.94700050354004 15.399999618530273,-24.920000076293945 C15.119999885559082,-23.89299964904785 14.232999801635742,-23.3799991607666 12.739999771118164,-23.3799991607666z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_39_1)" style="display: block">
+                  <g id="21" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,156.3560028076172,67.4800033569336)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-28.770000457763672,17.219999313354492 C-29.889999389648438,17.219999313354492 -30.450000762939453,16.799999237060547 -30.450000762939453,15.960000038146973 C-30.450000762939453,15.119999885559082 -29.889999389648438,13.95300006866455 -28.770000457763672,12.460000038146973 C-28.023000717163086,11.619999885559082 -23.683000564575195,5.039999961853027 -15.75,-7.28000020980835 C-15.562999725341797,-7.559999942779541 -15.562999725341797,-7.840000152587891 -15.75,-8.119999885559082 C-16.030000686645508,-8.399999618530273 -16.12299919128418,-8.680000305175781 -16.030000686645508,-8.960000038146973 C-16.030000686645508,-8.960000038146973 -10.989999771118164,-14.140000343322754 -10.989999771118164,-14.140000343322754 C-9.776000022888184,-15.913000106811523 -7.676000118255615,-16.799999237060547 -4.690000057220459,-16.799999237060547 C-3.943000078201294,-16.799999237060547 -3.569999933242798,-16.613000869750977 -3.569999933242798,-16.239999771118164 C-3.569999933242798,-16.239999771118164 -3.990000009536743,-15.539999961853027 -3.990000009536743,-15.539999961853027 C-5.203000068664551,-14.232999801635742 -6.510000228881836,-12.786999702453613 -7.909999847412109,-11.199999809265137 C-9.215999603271484,-9.61299991607666 -10.616000175476074,-7.840000152587891 -12.109999656677246,-5.880000114440918 C-16.12299919128418,-0.746999979019165 -18.1299991607666,2.7070000171661377 -18.1299991607666,4.480000019073486 C-18.1299991607666,4.760000228881836 -18.08300018310547,4.947000026702881 -17.989999771118164,5.039999961853027 C-17.989999771118164,5.039999961853027 9.170000076293945,-14.699999809265137 9.170000076293945,-14.699999809265137 C11.40999984741211,-16.3799991607666 13.836999893188477,-17.219999313354492 16.450000762939453,-17.219999313354492 C17.944000244140625,-17.219999313354492 18.690000534057617,-16.65999984741211 18.690000534057617,-15.539999961853027 C18.690000534057617,-14.32699966430664 17.709999084472656,-12.506999969482422 15.75,-10.079999923706055 C14.723999977111816,-8.960000038146973 13.744000434875488,-6.813000202178955 12.8100004196167,-3.640000104904175 C11.876999855041504,-0.746999979019165 11.40999984741211,2.052999973297119 11.40999984741211,4.760000228881836 C11.40999984741211,8.213000297546387 12.529999732971191,9.65999984741211 14.770000457763672,9.100000381469727 C17.19700050354004,8.446999549865723 19.437000274658203,7.699999809265137 21.489999771118164,6.860000133514404 C23.636999130249023,6.019999980926514 25.549999237060547,4.993000030517578 27.229999542236328,3.7799999713897705 C28.06999969482422,3.2200000286102295 28.90999984741211,2.940000057220459 29.75,2.940000057220459 C30.216999053955078,2.940000057220459 30.450000762939453,3.127000093460083 30.450000762939453,3.5 C30.450000762939453,3.7799999713897705 30.030000686645508,4.433000087738037 29.190000534057617,5.460000038146973 C27.976999282836914,6.953000068664551 24.89699935913086,8.680000305175781 19.950000762939453,10.640000343322754 C14.90999984741211,12.506999969482422 11.317000389099121,13.4399995803833 9.170000076293945,13.4399995803833 C5.53000020980835,13.4399995803833 3.7100000381469727,11.527000427246094 3.7100000381469727,7.699999809265137 C3.7100000381469727,4.619999885559082 5.296999931335449,-0.2800000011920929 8.470000267028809,-7 C8.843999862670898,-7.6529998779296875 9.029999732971191,-8.307000160217285 9.029999732971191,-8.960000038146973 C9.029999732971191,-9.61299991607666 8.704000473022461,-9.9399995803833 8.050000190734863,-9.9399995803833 C7.117000102996826,-9.9399995803833 6.044000148773193,-9.472999572753906 4.829999923706055,-8.539999961853027 C1.097000002861023,-5.927000045776367 -2.263000011444092,-3.453000068664551 -5.25,-1.1200000047683716 C-8.142999649047852,1.2130000591278076 -10.616000175476074,3.359999895095825 -12.670000076293945,5.320000171661377 C-12.670000076293945,5.320000171661377 -22.610000610351562,14.979999542236328 -22.610000610351562,14.979999542236328 C-23.729999542236328,15.913000106811523 -25.270000457763672,16.613000869750977 -27.229999542236328,17.079999923706055 C-27.510000228881836,17.17300033569336 -27.790000915527344,17.219999313354492 -28.06999969482422,17.219999313354492 C-28.06999969482422,17.219999313354492 -28.770000457763672,17.219999313354492 -28.770000457763672,17.219999313354492z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_33_1)" style="display: block">
+                  <g id="22" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,199.85299682617188,63.792999267578125)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-10.079999923706055,21.465999603271484 C-12.973999977111816,21.465999603271484 -15.494000434875488,20.719999313354492 -17.639999389648438,19.226999282836914 C-19.694000244140625,17.732999801635742 -20.719999313354492,15.960000038146973 -20.719999313354492,13.906999588012695 C-20.719999313354492,13.159000396728516 -20.48699951171875,11.993000030517578 -20.020000457763672,10.406999588012695 C-17.31399917602539,2.6600000858306885 -10.220000267028809,-6.39300012588501 1.2599999904632568,-16.753000259399414 C1.2599999904632568,-16.753000259399414 8.260000228881836,-19.273000717163086 8.260000228881836,-19.273000717163086 C12.739999771118164,-20.766000747680664 15.166000366210938,-21.465999603271484 15.539999961853027,-21.37299919128418 C18.993000030517578,-20.812999725341797 20.719999313354492,-19.365999221801758 20.719999313354492,-17.033000946044922 C20.719999313354492,-12.553000450134277 17.125999450683594,-8.119999885559082 9.9399995803833,-3.7330000400543213 C3.5,0.18700000643730164 -2.1470000743865967,2.1459999084472656 -7,2.1459999084472656 C-7,2.1459999084472656 -8.399999618530273,2.1459999084472656 -8.399999618530273,2.1459999084472656 C-8.866999626159668,2.053999900817871 -9.333999633789062,1.9600000381469727 -9.800000190734863,1.8669999837875366 C-10.734000205993652,3.1740000247955322 -11.574000358581543,4.38700008392334 -12.319999694824219,5.506999969482422 C-13.067000389099121,6.626999855041504 -13.673999786376953,7.699999809265137 -14.140000343322754,8.72700023651123 C-14.88700008392334,10.5 -15.260000228881836,11.993000030517578 -15.260000228881836,13.206999778747559 C-15.260000228881836,16.28700065612793 -14,17.826000213623047 -11.479999542236328,17.826000213623047 C-8.960000038146973,17.826000213623047 -4.900000095367432,16.707000732421875 0.699999988079071,14.465999603271484 C6.11299991607666,12.413999557495117 9.800000190734863,10.593000411987305 11.760000228881836,9.006999969482422 C12.505999565124512,8.538999557495117 13.15999984741211,8.307000160217285 13.720000267028809,8.307000160217285 C14.279999732971191,8.307000160217285 14.5600004196167,8.538999557495117 14.5600004196167,9.006999969482422 C14.465999603271484,9.567000389099121 14,10.173999786376953 13.15999984741211,10.826000213623047 C11.760000228881836,11.854000091552734 10.12600040435791,12.927000045776367 8.260000228881836,14.04699993133545 C6.486000061035156,15.074000358581543 4.480000019073486,16.194000244140625 2.240000009536743,17.406999588012695 C-3.4539999961853027,20.11400032043457 -7.559999942779541,21.465999603271484 -10.079999923706055,21.465999603271484z M-2.6600000858306885,-0.9330000281333923 C0.699999988079071,-0.9330000281333923 4.245999813079834,-2.753000020980835 7.980000019073486,-6.39300012588501 C11.526000022888184,-9.9399995803833 13.300000190734863,-12.880000114440918 13.300000190734863,-15.213000297546387 C13.300000190734863,-16.520000457763672 12.692999839782715,-17.219999313354492 11.479999542236328,-17.312999725341797 C7.466000080108643,-17.965999603271484 1.4459999799728394,-12.972999572753906 -6.579999923706055,-2.3329999446868896 C-5.646999835968018,-1.399999976158142 -4.340000152587891,-0.9330000281333923 -2.6600000858306885,-0.9330000281333923z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_27_1)" style="display: block">
+                  <g id="23" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,304.88800048828125,47.25)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-36.18899917602539,47.25 C-43.18899917602539,47.25 -49.303001403808594,44.823001861572266 -54.52899932861328,39.970001220703125 C-59.8489990234375,35.209999084472656 -62.5099983215332,29.702999114990234 -62.5099983215332,23.450000762939453 C-62.5099983215332,18.03700065612793 -60.50299835205078,13.463000297546387 -56.4900016784668,9.729999542236328 C-54.99599838256836,8.237000465393066 -53.45600128173828,7.0229997634887695 -51.869998931884766,6.090000152587891 C-50.28300094604492,5.1570000648498535 -48.60300064086914,4.690000057220459 -46.83000183105469,4.690000057220459 C-46.83000183105469,4.690000057220459 -46.130001068115234,4.690000057220459 -46.130001068115234,4.690000057220459 C-45.382999420166016,4.690000057220459 -45.0099983215332,4.829999923706055 -45.0099983215332,5.110000133514404 C-45.0099983215332,5.763000011444092 -45.803001403808594,6.230000019073486 -47.38999938964844,6.510000228881836 C-49.722999572753906,6.882999897003174 -51.91600036621094,8.609999656677246 -53.96900177001953,11.6899995803833 C-54.99599838256836,13.463000297546387 -55.882999420166016,15.376999855041504 -56.630001068115234,17.43000030517578 C-57.28300094604492,19.389999389648438 -57.60900115966797,21.53700065612793 -57.60900115966797,23.8700008392334 C-57.60900115966797,29.190000534057617 -55.36899948120117,33.95000076293945 -50.888999938964844,38.150001525878906 C-46.50299835205078,42.44300079345703 -41.41600036621094,44.59000015258789 -35.630001068115234,44.59000015258789 C-30.775999069213867,44.59000015258789 -26.110000610351562,43.61000061035156 -21.6299991607666,41.650001525878906 C-17.149999618530273,39.78300094604492 -12.902999877929688,37.029998779296875 -8.890000343322754,33.38999938964844 C-6.276000022888184,31.149999618530273 -3.615999937057495,28.30299949645996 -0.9089999794960022,24.850000381469727 C1.8910000324249268,21.39699935913086 4.736999988555908,17.290000915527344 7.63100004196167,12.529999732971191 C7.63100004196167,12.529999732971191 30.31100082397461,-25.1299991607666 30.31100082397461,-25.1299991607666 C21.256999969482422,-28.677000045776367 13.930000305175781,-31.476999282836914 8.329999923706055,-33.529998779296875 C2.8239998817443848,-35.676998138427734 -0.9559999704360962,-37.07699966430664 -3.009999990463257,-37.72999954223633 C-9.449999809265137,-39.78300094604492 -15.656000137329102,-41.323001861572266 -21.6299991607666,-42.349998474121094 C-27.60300064086914,-43.37699890136719 -33.483001708984375,-43.88999938964844 -39.27000045776367,-43.88999938964844 C-52.33599853515625,-43.88999938964844 -58.869998931884766,-40.38999938964844 -58.869998931884766,-33.38999938964844 C-58.869998931884766,-27.60300064086914 -56.303001403808594,-22.329999923706055 -51.16899871826172,-17.56999969482422 C-50.60900115966797,-17.19700050354004 -50.32899856567383,-16.777000427246094 -50.32899856567383,-16.309999465942383 C-50.32899856567383,-16.030000686645508 -50.51599884033203,-15.890000343322754 -50.888999938964844,-15.890000343322754 C-52.00899887084961,-15.890000343322754 -52.895999908447266,-16.216999053955078 -53.54899978637695,-16.8700008392334 C-55.323001861572266,-18.08300018310547 -56.76900100708008,-19.110000610351562 -57.888999938964844,-19.950000762939453 C-58.91600036621094,-20.882999420166016 -59.66299819946289,-21.677000045776367 -60.130001068115234,-22.329999923706055 C-61.99599838256836,-24.756999969482422 -62.93000030517578,-27.743000030517578 -62.93000030517578,-31.290000915527344 C-62.93000030517578,-36.516998291015625 -60.17599868774414,-40.62300109863281 -54.66899871826172,-43.61000061035156 C-49.62900161743164,-46.0369987487793 -43.702999114990234,-47.25 -36.88999938964844,-47.25 C-25.31599998474121,-47.25 -13.508999824523926,-45.52299880981445 -1.468999981880188,-42.06999969482422 C2.8239998817443848,-40.856998443603516 7.863999843597412,-39.222999572753906 13.649999618530273,-37.16999816894531 C19.437000274658203,-35.117000579833984 26.017000198364258,-32.59700012207031 33.38999938964844,-29.610000610351562 C35.444000244140625,-31.94300079345703 37.21699905395508,-33.57699966430664 38.709999084472656,-34.5099983215332 C39.73699951171875,-35.06999969482422 40.95100021362305,-35.4900016784668 42.35100173950195,-35.77000045776367 C43.84400177001953,-36.143001556396484 45.47700119018555,-36.33000183105469 47.250999450683594,-36.33000183105469 C50.70399856567383,-36.33000183105469 54.20399856567383,-34.97700119018555 57.750999450683594,-32.27000045776367 C61.20399856567383,-29.469999313354492 62.93000030517578,-26.670000076293945 62.93000030517578,-23.8700008392334 C62.93000030517578,-18.92300033569336 59.89699935913086,-16.450000762939453 53.83000183105469,-16.450000762939453 C51.59000015258789,-16.450000762939453 49.21099853515625,-16.8700008392334 46.691001892089844,-17.709999084472656 C40.99700164794922,-19.670000076293945 36.98400115966797,-21.39699935913086 34.650001525878906,-22.889999389648438 C31.756999969482422,-17.756999969482422 28.490999221801758,-12.062999725341797 24.85099983215332,-5.809999942779541 C21.304000854492188,0.4429999887943268 17.336999893188477,7.302999973297119 12.951000213623047,14.770000457763672 C7.63100004196167,22.982999801635742 1.2369999885559082,29.982999801635742 -6.230000019073486,35.77000045776367 C-16.309999465942383,43.42300033569336 -26.29599952697754,47.25 -36.18899917602539,47.25z M56.35100173950195,-21.06999969482422 C58.590999603271484,-21.06999969482422 59.709999084472656,-22.003000259399414 59.709999084472656,-23.8700008392334 C59.709999084472656,-25.92300033569336 58.49700164794922,-28.023000717163086 56.07099914550781,-30.170000076293945 C53.36399841308594,-32.59700012207031 50.33100128173828,-33.810001373291016 46.97100067138672,-33.810001373291016 C42.86399841308594,-33.810001373291016 39.784000396728516,-31.663000106811523 37.73099899291992,-27.3700008392334 C39.2239990234375,-26.62299919128418 40.763999938964844,-25.87700080871582 42.35100173950195,-25.1299991607666 C44.03099822998047,-24.476999282836914 45.75699996948242,-23.822999954223633 47.53099822998047,-23.170000076293945 C51.637001037597656,-21.770000457763672 54.57699966430664,-21.06999969482422 56.35100173950195,-21.06999969482422z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_21_1)" style="display: block">
+                  <g id="24" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,361.4100036621094,64.26000213623047)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M1.2599999904632568,20.579999923706055 C-0.7929999828338623,20.579999923706055 -1.8200000524520874,19.69300079345703 -1.8200000524520874,17.920000076293945 C-1.8200000524520874,17.920000076293945 -1.5399999618530273,16.799999237060547 -1.5399999618530273,16.799999237060547 C0.3269999921321869,13.906999588012695 2.194000005722046,10.732999801635742 4.059999942779541,7.28000020980835 C5.927000045776367,3.8269999027252197 7.88700008392334,0.09300000220537186 9.9399995803833,-3.9200000762939453 C9.006999969482422,-3.2669999599456787 7.980000019073486,-2.566999912261963 6.860000133514404,-1.8200000524520874 C5.834000110626221,-1.0729999542236328 4.714000225067139,-0.2329999953508377 3.5,0.699999988079071 C2.2869999408721924,1.6330000162124634 0.9800000190734863,2.61299991607666 -0.41999998688697815,3.640000104904175 C-1.7259999513626099,4.666999816894531 -3.1730000972747803,5.692999839782715 -4.760000228881836,6.71999979019165 C-4.760000228881836,6.71999979019165 -15.399999618530273,13.720000267028809 -15.399999618530273,13.720000267028809 C-18.572999954223633,15.77299976348877 -21.280000686645508,17.267000198364258 -23.520000457763672,18.200000762939453 C-25.760000228881836,19.132999420166016 -27.533000946044922,19.600000381469727 -28.84000015258789,19.600000381469727 C-30.520000457763672,19.600000381469727 -31.360000610351562,18.200000762939453 -31.360000610351562,15.399999618530273 C-31.360000610351562,13.067000389099121 -30.285999298095703,10.126999855041504 -28.139999389648438,6.579999923706055 C-27.39299964904785,5.2729997634887695 -26.600000381469727,4.013000011444092 -25.760000228881836,2.799999952316284 C-24.920000076293945,1.4930000305175781 -24.079999923706055,0.2329999953508377 -23.239999771118164,-0.9800000190734863 C-22.399999618530273,-2.193000078201294 -21.51300048828125,-3.5929999351501465 -20.579999923706055,-5.179999828338623 C-19.55299949645996,-6.767000198364258 -18.479999542236328,-8.493000030517578 -17.360000610351562,-10.359999656677246 C-17.266000747680664,-10.732999801635742 -17.17300033569336,-11.107000350952148 -17.079999923706055,-11.479999542236328 C-16.986000061035156,-11.852999687194824 -16.89299964904785,-12.27299976348877 -16.799999237060547,-12.739999771118164 C-16.70599937438965,-13.487000465393066 -16.426000595092773,-14.512999534606934 -15.960000038146973,-15.819999694824219 C-15.77299976348877,-16.28700065612793 -14.5600004196167,-16.847000122070312 -12.319999694824219,-17.5 C-11.012999534606934,-17.966999053955078 -9.800000190734863,-18.386999130249023 -8.680000305175781,-18.760000228881836 C-7.559999942779541,-19.226999282836914 -6.625999927520752,-19.64699935913086 -5.880000114440918,-20.020000457763672 C-5.22599983215332,-20.39299964904785 -4.665999889373779,-20.579999923706055 -4.199999809265137,-20.579999923706055 C-3.1730000972747803,-20.579999923706055 -2.6600000858306885,-20.113000869750977 -2.6600000858306885,-19.18000030517578 C-2.6600000858306885,-19.086999893188477 -2.753000020980835,-18.760000228881836 -2.940000057220459,-18.200000762939453 C-5.460000038146973,-15.213000297546387 -7.980000019073486,-12.180000305175781 -10.5,-9.100000381469727 C-13.020000457763672,-6.019999980926514 -15.539999961853027,-2.8469998836517334 -18.059999465942383,0.41999998688697815 C-22.540000915527344,6.11299991607666 -24.780000686645508,10.267000198364258 -24.780000686645508,12.880000114440918 C-24.780000686645508,13.626999855041504 -24.4060001373291,14 -23.65999984741211,14 C-22.260000228881836,14 -19.22599983215332,12.506999969482422 -14.5600004196167,9.520000457763672 C-12.600000381469727,8.213000297546387 -10.640000343322754,6.9070000648498535 -8.680000305175781,5.599999904632568 C-6.71999979019165,4.293000221252441 -4.806000232696533,2.986999988555908 -2.940000057220459,1.6799999475479126 C1.5399999618530273,-1.3070000410079956 5.646999835968018,-4.293000221252441 9.380000114440918,-7.28000020980835 C13.206999778747559,-10.267000198364258 16.65999984741211,-13.206999778747559 19.739999771118164,-16.100000381469727 C20.767000198364258,-16.847000122070312 21.700000762939453,-17.219999313354492 22.540000915527344,-17.219999313354492 C23.847000122070312,-17.219999313354492 24.5,-16.799999237060547 24.5,-15.960000038146973 C24.5,-15.493000030517578 24.31399917602539,-15.072999954223633 23.940000534057617,-14.699999809265137 C21.79400062561035,-12.086999893188477 19.927000045776367,-9.706999778747559 18.34000015258789,-7.559999942779541 C16.847000122070312,-5.506999969482422 15.633999824523926,-3.5929999351501465 14.699999809265137,-1.8200000524520874 C14.699999809265137,-1.8200000524520874 7.420000076293945,12.739999771118164 7.420000076293945,12.739999771118164 C9.847000122070312,11.713000297546387 12.833999633789062,10.5 16.3799991607666,9.100000381469727 C19.927000045776367,7.60699987411499 24.12700080871582,5.927000045776367 28.979999542236328,4.059999942779541 C29.260000228881836,3.9670000076293945 29.493999481201172,3.9200000762939453 29.68000030517578,3.9200000762939453 C29.959999084472656,3.8269999027252197 30.14699935913086,3.7799999713897705 30.239999771118164,3.7799999713897705 C30.98699951171875,3.7799999713897705 31.360000610351562,4.059999942779541 31.360000610351562,4.619999885559082 C31.360000610351562,5.367000102996826 30.65999984741211,5.9730000495910645 29.260000228881836,6.440000057220459 C25.527000427246094,7.4670000076293945 21.93400001525879,8.866999626159668 18.479999542236328,10.640000343322754 C16.893999099731445,11.479999542236328 15.354000091552734,12.319999694824219 13.859999656677246,13.15999984741211 C12.366999626159668,14 10.82699966430664,14.88700008392334 9.239999771118164,15.819999694824219 C9.147000312805176,15.913000106811523 9.006999969482422,16.006999969482422 8.819999694824219,16.100000381469727 C8.633999824523926,16.19300079345703 8.354000091552734,16.33300018310547 7.980000019073486,16.520000457763672 C7.60699987411499,16.707000732421875 7.186999797821045,16.98699951171875 6.71999979019165,17.360000610351562 C6.3470001220703125,17.732999801635742 5.834000110626221,18.152999877929688 5.179999828338623,18.6200008392334 C3.313999891281128,19.927000045776367 2.006999969482422,20.579999923706055 1.2599999904632568,20.579999923706055z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_15_1)" style="display: block">
+                  <g id="37" transform="matrix(1,0,0,1,257,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,156.3560028076172,67.4800033569336)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-28.770000457763672,17.219999313354492 C-29.889999389648438,17.219999313354492 -30.450000762939453,16.799999237060547 -30.450000762939453,15.960000038146973 C-30.450000762939453,15.119999885559082 -29.889999389648438,13.95300006866455 -28.770000457763672,12.460000038146973 C-28.023000717163086,11.619999885559082 -23.683000564575195,5.039999961853027 -15.75,-7.28000020980835 C-15.562999725341797,-7.559999942779541 -15.562999725341797,-7.840000152587891 -15.75,-8.119999885559082 C-16.030000686645508,-8.399999618530273 -16.12299919128418,-8.680000305175781 -16.030000686645508,-8.960000038146973 C-16.030000686645508,-8.960000038146973 -10.989999771118164,-14.140000343322754 -10.989999771118164,-14.140000343322754 C-9.776000022888184,-15.913000106811523 -7.676000118255615,-16.799999237060547 -4.690000057220459,-16.799999237060547 C-3.943000078201294,-16.799999237060547 -3.569999933242798,-16.613000869750977 -3.569999933242798,-16.239999771118164 C-3.569999933242798,-16.239999771118164 -3.990000009536743,-15.539999961853027 -3.990000009536743,-15.539999961853027 C-5.203000068664551,-14.232999801635742 -6.510000228881836,-12.786999702453613 -7.909999847412109,-11.199999809265137 C-9.215999603271484,-9.61299991607666 -10.616000175476074,-7.840000152587891 -12.109999656677246,-5.880000114440918 C-16.12299919128418,-0.746999979019165 -18.1299991607666,2.7070000171661377 -18.1299991607666,4.480000019073486 C-18.1299991607666,4.760000228881836 -18.08300018310547,4.947000026702881 -17.989999771118164,5.039999961853027 C-17.989999771118164,5.039999961853027 9.170000076293945,-14.699999809265137 9.170000076293945,-14.699999809265137 C11.40999984741211,-16.3799991607666 13.836999893188477,-17.219999313354492 16.450000762939453,-17.219999313354492 C17.944000244140625,-17.219999313354492 18.690000534057617,-16.65999984741211 18.690000534057617,-15.539999961853027 C18.690000534057617,-14.32699966430664 17.709999084472656,-12.506999969482422 15.75,-10.079999923706055 C14.723999977111816,-8.960000038146973 13.744000434875488,-6.813000202178955 12.8100004196167,-3.640000104904175 C11.876999855041504,-0.746999979019165 11.40999984741211,2.052999973297119 11.40999984741211,4.760000228881836 C11.40999984741211,8.213000297546387 12.529999732971191,9.65999984741211 14.770000457763672,9.100000381469727 C17.19700050354004,8.446999549865723 19.437000274658203,7.699999809265137 21.489999771118164,6.860000133514404 C23.636999130249023,6.019999980926514 25.549999237060547,4.993000030517578 27.229999542236328,3.7799999713897705 C28.06999969482422,3.2200000286102295 28.90999984741211,2.940000057220459 29.75,2.940000057220459 C30.216999053955078,2.940000057220459 30.450000762939453,3.127000093460083 30.450000762939453,3.5 C30.450000762939453,3.7799999713897705 30.030000686645508,4.433000087738037 29.190000534057617,5.460000038146973 C27.976999282836914,6.953000068664551 24.89699935913086,8.680000305175781 19.950000762939453,10.640000343322754 C14.90999984741211,12.506999969482422 11.317000389099121,13.4399995803833 9.170000076293945,13.4399995803833 C5.53000020980835,13.4399995803833 3.7100000381469727,11.527000427246094 3.7100000381469727,7.699999809265137 C3.7100000381469727,4.619999885559082 5.296999931335449,-0.2800000011920929 8.470000267028809,-7 C8.843999862670898,-7.6529998779296875 9.029999732971191,-8.307000160217285 9.029999732971191,-8.960000038146973 C9.029999732971191,-9.61299991607666 8.704000473022461,-9.9399995803833 8.050000190734863,-9.9399995803833 C7.117000102996826,-9.9399995803833 6.044000148773193,-9.472999572753906 4.829999923706055,-8.539999961853027 C1.097000002861023,-5.927000045776367 -2.263000011444092,-3.453000068664551 -5.25,-1.1200000047683716 C-8.142999649047852,1.2130000591278076 -10.616000175476074,3.359999895095825 -12.670000076293945,5.320000171661377 C-12.670000076293945,5.320000171661377 -22.610000610351562,14.979999542236328 -22.610000610351562,14.979999542236328 C-23.729999542236328,15.913000106811523 -25.270000457763672,16.613000869750977 -27.229999542236328,17.079999923706055 C-27.510000228881836,17.17300033569336 -27.790000915527344,17.219999313354492 -28.06999969482422,17.219999313354492 C-28.06999969482422,17.219999313354492 -28.770000457763672,17.219999313354492 -28.770000457763672,17.219999313354492z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_9_1)" style="display: block">
+                  <g id="39" transform="matrix(1,0,0,1,257,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,199.85299682617188,63.792999267578125)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M-10.079999923706055,21.465999603271484 C-12.973999977111816,21.465999603271484 -15.494000434875488,20.719999313354492 -17.639999389648438,19.226999282836914 C-19.694000244140625,17.732999801635742 -20.719999313354492,15.960000038146973 -20.719999313354492,13.906999588012695 C-20.719999313354492,13.159000396728516 -20.48699951171875,11.993000030517578 -20.020000457763672,10.406999588012695 C-17.31399917602539,2.6600000858306885 -10.220000267028809,-6.39300012588501 1.2599999904632568,-16.753000259399414 C1.2599999904632568,-16.753000259399414 8.260000228881836,-19.273000717163086 8.260000228881836,-19.273000717163086 C12.739999771118164,-20.766000747680664 15.166000366210938,-21.465999603271484 15.539999961853027,-21.37299919128418 C18.993000030517578,-20.812999725341797 20.719999313354492,-19.365999221801758 20.719999313354492,-17.033000946044922 C20.719999313354492,-12.553000450134277 17.125999450683594,-8.119999885559082 9.9399995803833,-3.7330000400543213 C3.5,0.18700000643730164 -2.1470000743865967,2.1459999084472656 -7,2.1459999084472656 C-7,2.1459999084472656 -8.399999618530273,2.1459999084472656 -8.399999618530273,2.1459999084472656 C-8.866999626159668,2.053999900817871 -9.333999633789062,1.9600000381469727 -9.800000190734863,1.8669999837875366 C-10.734000205993652,3.1740000247955322 -11.574000358581543,4.38700008392334 -12.319999694824219,5.506999969482422 C-13.067000389099121,6.626999855041504 -13.673999786376953,7.699999809265137 -14.140000343322754,8.72700023651123 C-14.88700008392334,10.5 -15.260000228881836,11.993000030517578 -15.260000228881836,13.206999778747559 C-15.260000228881836,16.28700065612793 -14,17.826000213623047 -11.479999542236328,17.826000213623047 C-8.960000038146973,17.826000213623047 -4.900000095367432,16.707000732421875 0.699999988079071,14.465999603271484 C6.11299991607666,12.413999557495117 9.800000190734863,10.593000411987305 11.760000228881836,9.006999969482422 C12.505999565124512,8.538999557495117 13.15999984741211,8.307000160217285 13.720000267028809,8.307000160217285 C14.279999732971191,8.307000160217285 14.5600004196167,8.538999557495117 14.5600004196167,9.006999969482422 C14.465999603271484,9.567000389099121 14,10.173999786376953 13.15999984741211,10.826000213623047 C11.760000228881836,11.854000091552734 10.12600040435791,12.927000045776367 8.260000228881836,14.04699993133545 C6.486000061035156,15.074000358581543 4.480000019073486,16.194000244140625 2.240000009536743,17.406999588012695 C-3.4539999961853027,20.11400032043457 -7.559999942779541,21.465999603271484 -10.079999923706055,21.465999603271484z M-2.6600000858306885,-0.9330000281333923 C0.699999988079071,-0.9330000281333923 4.245999813079834,-2.753000020980835 7.980000019073486,-6.39300012588501 C11.526000022888184,-9.9399995803833 13.300000190734863,-12.880000114440918 13.300000190734863,-15.213000297546387 C13.300000190734863,-16.520000457763672 12.692999839782715,-17.219999313354492 11.479999542236328,-17.312999725341797 C7.466000080108643,-17.965999603271484 1.4459999799728394,-12.972999572753906 -6.579999923706055,-2.3329999446868896 C-5.646999835968018,-1.399999976158142 -4.340000152587891,-0.9330000281333923 -2.6600000858306885,-0.9330000281333923z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+                <g mask="url(#__lottie_element_3_1)" style="display: block">
+                  <g id="25" transform="matrix(1,0,0,1,0.5,8.5)" opacity="1">
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,507.1369934082031,49.979000091552734)"
+                    >
+                      <path
+                        fill="rgb(168,157,143)"
+                        fill-opacity="1"
+                        d=" M4.059999942779541,36.540000915527344 C2.940000057220459,36.540000915527344 2.006999969482422,35.97999954223633 1.2599999904632568,34.86000061035156 C0.23399999737739563,33.27299880981445 -0.2800000011920929,31.12700080871582 -0.2800000011920929,28.420000076293945 C-0.2800000011920929,23.472999572753906 1.49399995803833,16.65999984741211 5.039999961853027,7.980000019073486 C-9.61299991607666,21.420000076293945 -20.67300033569336,29.81999969482422 -28.139999389648438,33.18000030517578 C-30.100000381469727,34.02000045776367 -31.780000686645508,34.439998626708984 -33.18000030517578,34.439998626708984 C-35.88600158691406,34.439998626708984 -37.2400016784668,33.132999420166016 -37.2400016784668,30.520000457763672 C-37.2400016784668,29.1200008392334 -36.77299880981445,27.533000946044922 -35.84000015258789,25.760000228881836 C-32.38600158691406,19.413000106811523 -26.83300018310547,12.972999572753906 -19.18000030517578,6.440000057220459 C-9.65999984741211,-1.6799999475479126 -2.052999973297119,-5.739999771118164 3.640000104904175,-5.739999771118164 C6.066999912261963,-5.739999771118164 8.21399974822998,-5.2270002365112305 10.079999923706055,-4.199999809265137 C10.079999923706055,-4.199999809265137 19.739999771118164,-20.440000534057617 19.739999771118164,-20.440000534057617 C21.979999542236328,-24.267000198364258 24.12700080871582,-27.39299964904785 26.18000030517578,-29.81999969482422 C28.233999252319336,-32.34000015258789 30.006999969482422,-34.25299835205078 31.5,-35.560001373291016 C32.15399932861328,-36.2130012512207 33.31999969482422,-36.540000915527344 35,-36.540000915527344 C36.49399948120117,-36.540000915527344 37.2400016784668,-36.073001861572266 37.2400016784668,-35.13999938964844 C37.2400016784668,-34.393001556396484 36.81999969482422,-33.50699996948242 35.97999954223633,-32.47999954223633 C33.64699935913086,-29.399999618530273 25.94700050354004,-18.34000015258789 12.880000114440918,0.699999988079071 C12.133999824523926,2.193000078201294 11.34000015258789,3.9670000076293945 10.5,6.019999980926514 C9.753999710083008,7.980000019073486 8.913999557495117,10.220000267028809 7.980000019073486,12.739999771118164 C5.460000038146973,19.83300018310547 4.199999809265137,25.200000762939453 4.199999809265137,28.84000015258789 C4.199999809265137,31.360000610351562 4.854000091552734,32.900001525878906 6.159999847412109,33.459999084472656 C6.71999979019165,33.553001403808594 7,33.880001068115234 7,34.439998626708984 C7,35.84000015258789 6.019999980926514,36.540000915527344 4.059999942779541,36.540000915527344z M-27.440000534057617,28.139999389648438 C-27.253000259399414,28.139999389648438 -27.020000457763672,28.093000411987305 -26.739999771118164,28 C-26.459999084472656,27.812999725341797 -26.132999420166016,27.67300033569336 -25.760000228881836,27.579999923706055 C-24.17300033569336,26.83300018310547 -22.1200008392334,25.572999954223633 -19.600000381469727,23.799999237060547 C-16.986000061035156,22.027000427246094 -13.95300006866455,19.78700065612793 -10.5,17.079999923706055 C-8.072999954223633,15.213000297546387 -5.50600004196167,12.972999572753906 -2.799999952316284,10.359999656677246 C-0.09300000220537186,7.6529998779296875 2.8469998836517334,4.666999816894531 6.019999980926514,1.399999976158142 C5.086999893188477,-0.5600000023841858 3.9200000762939453,-1.5399999618530273 2.5199999809265137,-1.5399999618530273 C-1.5859999656677246,-1.5399999618530273 -7.046000003814697,1.3070000410079956 -13.859999656677246,7 C-20.113000869750977,12.133000373840332 -24.54599952697754,16.847000122070312 -27.15999984741211,21.139999389648438 C-28.37299919128418,22.913000106811523 -28.979999542236328,24.5 -28.979999542236328,25.899999618530273 C-28.979999542236328,27.39299964904785 -28.465999603271484,28.139999389648438 -27.440000534057617,28.139999389648438z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <div>
+              <p>LIFE SPACE</p>
+            </div>
+            <div class="sec2video">
+              <div class="sec2videoWrap">
+                <video
+                  src="img/main_brand_mask.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-section">
+            <div class="sec2bg">
+              <div class="content-wrapper">
+                <div class="sec2word">
+                  <h3>최고의 품격, 최상의 가치 '더 플래티넘'</h3>
+                  <h2>
+                    ONE & ONLY<br />
+                    THE PLATINUM
+                  </h2>
+                  <button>
+                    <span>
+                      브랜드스토리<img
+                        src="img/main_complex_next_btn.svg"
+                        alt="화살표"
+                    /></span>
+                  </button>
+                </div>
+                <div class="videowrap2">
+                  <img
+                    src="img/main_brand_video.jpg"
+                    alt="유튜브영상미리보기"
+                  />
+                  <img src="img/main_brand_play_btn.svg" alt="버튼" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--section3-->
+      <div class="section3">
+        <div class="rolling">
+          <div class="bgWord">
+            <span>FINE TUNED LIFE SPACE</span>
+            <img src="img/main_banner_rolling_icon.svg" alt="아이콘" />
+          </div>
+          <div class="bgWord">
+            <span>FINE TUNED LIFE SPACE</span>
+            <img src="img/main_banner_rolling_icon.svg" alt="아이콘" />
+          </div>
+          <div class="bgWord">
+            <span>FINE TUNED LIFE SPACE</span>
+            <img src="img/main_banner_rolling_icon.svg" alt="아이콘" />
+          </div>
+          <div class="bgWord">
+            <span>FINE TUNED LIFE SPACE</span>
+            <img src="img/main_banner_rolling_icon.svg" alt="아이콘" />
+          </div>
+          <div class="bgWord">
+            <span>FINE TUNED LIFE SPACE</span>
+            <img src="img/main_banner_rolling_icon.svg" alt="아이콘" />
+          </div>
+        </div>
+        <div class="sec3conbox">
+          <!--section3-->
+          <ul>
+            <li>
+              <div>
+                <h3>SSANGYONG</h3>
+                <h2>해외 고급건축 실적 No.1</h2>
+                <p>쌍용건설의 작품이 많아질수록 세상은 더 아름다워집니다.</p>
+                <button>
+                  <span>
+                    쌍용건설<img
+                      src="img/main_complex_next_btn.svg"
+                      alt="화살표"
+                  /></span>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>REMODELING</h3>
+                <h2>리모델링 준공실적 No.1</h2>
+                <p>쌍용건설의 노하우를 더해 새로운 명품 단지로 탄생됩니다.</p>
+                <button>
+                  <span>
+                    리모델링<img
+                      src="img/main_complex_next_btn.svg"
+                      alt="화살표"
+                  /></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section4">
+        <div>
+          <div class="sec4Top">
+            <div>
+              <h3>더 플래티넘 소식</h3>
+              <button>
+                <span>
+                  더보기<img src="img/main_complex_next_btn.svg" alt="화살표"
+                /></span>
+              </button>
+            </div>
+            <ul>
+              <li>
+                <a href="#"
+                  ><span
+                    >새해 분양 예정 단지 분석해보니, 반포·방배·노량진...알짜
+                    분양 대기중</span
+                  ><span>2026.01.07</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    >쌍용건설, '품질·안전'으로 싱가포르서 훨훨...'고난도
+                    프로젝트'도 거뜬</span
+                  ><span>2025.12.11</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    >쌍용건설, 해외 손실 털고 반등 국면...수주 확대·재무 개선
+                    '쌍끌이'</span
+                  ><span>2025.12.08</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    >'3년 전 분양가' 부산진구 아파트... 원하는 동-호 선착순 지정
+                    계약</span
+                  ><span>2025.11.28</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    >쌍용건설, 수직증축 리모델링 원톱...기술·실적·대형사업 3박자
+                    갖췄다</span
+                  ><span>2025.11.26</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--비디오-->
+          <ul class="sec4Video">
+            <li>
+              <div>
+                <img
+                  src="img/26601d4a2eff41dfa7b1d33868a30238.jpg"
+                  alt="홍보사진"
+                />
+                <img src="img/main_brand_play_btn.svg" alt="버튼사진" />
+              </div>
+              <span>쌍용 더 플래티넘 서면</span>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="img/5b7e9a3adf674a298390e2e2498fe71d.jpg"
+                  alt="홍보사진"
+                />
+                <img src="img/main_brand_play_btn.svg" alt="버튼사진" />
+              </div>
+              <span>더 플래티넘 스카이헤론 in 평택</span>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="img/a2e80977e0e244e3bc0ae91b19741c31.jpg"
+                  alt="홍보사진"
+                />
+                <img src="img/main_brand_play_btn.svg" alt="버튼사진" />
+              </div>
+              <span>쌍용 더 플래티넘 네이처 광고영상</span>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="img/73222416ab8c405590b30e0c558cb126.jpg"
+                  alt="홍보사진"
+                />
+                <img src="img/main_brand_play_btn.svg" alt="버튼사진" />
+              </div>
+              <span>쌍용 더 플래티넘 여수35 - 홍보영상</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section5">
+        <!--section5-->
+        <div class="sec5Top">
+          <div>
+            <h3>고객서비스</h3>
+            <button>
+              <span>
+                자주 묻는 질문<img
+                  src="img/main_complex_next_btn.svg"
+                  alt="화살표"
+              /></span>
+            </button>
+          </div>
+          <ul class="main">
+            <li>
+              <h3>계약고객</h3>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <span>계약정보 조회</span>
+                    <span
+                      ><img src="img/main_complex_next_btn.svg" alt="화살표"
+                    /></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>중도금 납입조회</span>
+                    <span
+                      ><img src="img/main_complex_next_btn.svg" alt="화살표"
+                    /></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>고객문의</h3>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <span>예약 서비스</span>
+                    <span
+                      ><img src="img/main_complex_next_btn.svg" alt="화살표"
+                    /></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>온라인 문의</span>
+                    <span
+                      ><img src="img/main_complex_next_btn.svg" alt="화살표"
+                    /></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>A/S 안내</h3>
+              <ul class="sub">
+                <li>
+                  <a href="#">
+                    <span>A/S센터 안내</span>
+                    <span
+                      ><img src="img/main_complex_next_btn.svg" alt="화살표"
+                    /></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>A/S 신청</span>
+                    <span
+                      ><img src="img/main_complex_next_btn.svg" alt="화살표"
+                    /></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sec5bot">
+          <div>
+            <div>
+              <div>
+                <img src="img/main_customer_bot_icon.jpg" alt="아이콘" />
+              </div>
+              <div class="sec5Word">
+                <h3>고객센터 운영시간</h3>
+                <span class="clock">09:00 - 17:30</span>
+                <p>토요일과 공휴일, 국경일은 휴무</p>
+              </div>
+            </div>
+            <ul>
+              <li><span>분양 문의</span><span>080-011-0777</span></li>
+              <li><span>A/S 문의</span><span>02-3433-7575</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <!--footer-->
+        <div class="footerTop">
+          <ul>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+          </ul>
+          <div>
+            <button>
+              <span>
+                쌍용건설<img src="img/main_complex_next_btn.svg" alt="화살표"
+              /></span>
+            </button>
+            <button>
+              <span>
+                글로벌세아<img src="img/main_complex_next_btn.svg" alt="화살표"
+              /></span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span
+              >우편번호 05510 서울 송파구 올림픽로 299(신천동)
+              <br class="mobile-br" />쌍용건설 전화 : 02-3433-7114 팩스 :
+              02-3433-7111 <br class="mobile-br" />사업자등록번호 :
+              120-81-01957</span
+            >
+            <span class="copy"
+              >Copyright © 2025 SSANGYONG & CONSTRUCTION CO.,LTD. All Rights
+              Reserved.</span
+            >
+          </div>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="img/footer_youtube_icon_off.svg"
+                  alt="유튜브아이콘"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="img/footer_instagram_icon_off.svg"
+                  alt="인스타그램아이콘"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="img/footer_facebook_icon_off.svg"
+                  alt="페이스북아이콘"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="js/custom.js"></script>
+    <script>
+      const sec2videoWrap = document.querySelector(".sec2videoWrap");
+      const video = document.querySelector(".sec2videoWrap video ");
+      const sec2bg = document.querySelector(".section2 .sec2bg");
+      const svg = document.querySelector(".section2 .gw > svg ");
+      const life = document.querySelector(".section2 .gw > div p");
+      const paths = document.querySelectorAll(".section2 .gw svg path");
+      const content = document.querySelectorAll(".content-section");
+      const sec2word = document.querySelectorAll(".sec2word");
+      const section2 = document.querySelectorAll(".section2");
+      const videowrap2 = document.querySelectorAll(".section2 .videowrap2 ");
+
+      $(function () {
+        $(".rolling").simplyScroll({
+          speed: 2,
+          pauseOnHover: false,
+          pauseOnTouch: false,
+        });
+      });
+      gsap.registerPlugin(ScrollTrigger);
+      paths.forEach((path) => {
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+      });
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section2",
+          start: "top top", // 섹션2가 화면 맨 위에 닿으면 시작
+          end: "+=3000", // 스크롤을 3000px만큼 내리는 동안 애니메이션 진행 (속도 조절용)
+          scrub: 1, // 스크롤 했다가 되돌리면 애니메이션도 되감기
+          pin: true, // [핵심] 애니메이션 끝날 때까지 섹션2를 화면에 고정!
+          markers: false, // 개발 끝나면 false로 변경
+        },
+      });
+
+      const reversedPaths = Array.from(paths).reverse();
+
+      reversedPaths.forEach((path) => {
+        t1.to(
+          path,
+          {
+            strokeDashoffset: 0,
+            duration: 0.2,
+          },
+          "<0.05",
+        );
+      });
+
+      t1.to(".section2 .gw > div", {
+        opacity: 1,
+        duration: 0.3,
+      });
+
+      // 비디오를 아래에서 위로 올리기
+      t1.fromTo(
+        ".sec2videoWrap",
+        { y: 550 }, // 아래에서 시작
+        { y: -150, duration: 0.5 },
+      );
+
+      t1.set(".section2 .sec2bg", {
+        opacity: 1,
+      });
+
+      t1.to(
+        ".section2",
+        {
+          "--brandBgMask": "0% 0% 0% 0%",
+          duration: 1,
+        },
+        "<",
+      ); // 동시에 확대 시작
+
+      t1.to(".sec2word", {
+        opacity: 1,
+        y: 0,
+        duration: 0.3,
+        stagger: 0.1,
+        x: 0,
+      })
+        .to(
+          ".section2 .videowrap2",
+          {
+            clipPath: "inset(0 0% 0 0)",
+            duration: 0.3,
+            ease: "power2.out",
+          },
+          "<",
+        )
+        .to({}, { duration: 2 });
+    </script>
+  </body>
+</html>
