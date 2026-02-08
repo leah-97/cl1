@@ -376,7 +376,7 @@ header.active .headerRight button:hover {
 /*visual 플래티넘 버튼*/
 .visualBtn {
   width: 17%;
-  height: 15%;
+  height: 8%;
   position: absolute;
   right: 30px;
   bottom: 0;
@@ -1888,10 +1888,10 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual 플래티넘 버튼*/
   .visualBtn {
     width: 20%;
-    height: 15%;
+    height: 8%;
     position: absolute;
     right: 2%;
-    bottom: -75px;
+    bottom: 0;
     border: none;
     border-radius: 20px 20px 0px 0px;
     background: linear-gradient(135deg, #30559a, #08154a);
@@ -3333,7 +3333,7 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual하단 글씨*/
   .visualwrodWrap {
     position: absolute;
-    bottom: 10%;
+    bottom: 12dvh;
     left: 0;
     width: 100%;
     padding: 0 5vw;
@@ -3350,7 +3350,7 @@ footer > div:nth-child(2) ul li a:hover {
     width: 35%;
     gap: 40px;
     position: absolute;
-    bottom: 0;
+    bottom: 2dvh;
     left: 50px;
   }
   .barWrap li {
@@ -3942,6 +3942,7 @@ footer > div:nth-child(2) ul li a:hover {
   .section2 button:hover span img {
     display: none !important;
   }
+
   /*section3*/
   .section3 {
     background-image: url("../img/main_banner_bg.jpg");
@@ -3950,10 +3951,11 @@ footer > div:nth-child(2) ul li a:hover {
     background-size: cover;
     padding: 5%;
     position: relative;
-    height: 100dvh;
     z-index: 10;
     box-sizing: border-box;
     display: flex;
+    height: auto;
+    min-height: 100vh;
   }
   .sec3conbox {
     padding: 0px 5%;
@@ -3987,17 +3989,17 @@ footer > div:nth-child(2) ul li a:hover {
     justify-content: space-between;
     margin-top: 0 !important;
     gap: 20px;
-    height: 75%;
+    height: auto;
   }
   .section3 ul li {
     display: flex;
-
+    aspect-ratio: 16/9;
+    max-height: 260px;
     align-items: center;
   }
   /*section3 box li*/
   .section3 li:first-child {
     width: 100%;
-    height: 40%;
     background-image: url("../img/main_banner_li01_bg2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -4009,7 +4011,6 @@ footer > div:nth-child(2) ul li a:hover {
   }
   .section3 li:nth-child(2) {
     width: 100%;
-    height: 40%;
     background-image: url("../img/main_banner_li02_bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;

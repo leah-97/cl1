@@ -21,6 +21,10 @@ $(function () {
     lastScroll = currentScroll;
   });
 
+  window.addEventListener("load", function () {
+    const video = document.querySelector(".sec2videoWrap video");
+    video?.play();
+  });
   $(".mainMenu > nav > ul").mouseenter(function () {
     $(".subBg").stop().slideDown(300);
     $("header").addClass("active");
