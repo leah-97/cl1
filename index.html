@@ -278,6 +278,9 @@
         </header>
 
         <!--비주얼 하단 글씨-->
+        <button class="visualBtn">
+          <span> PLATINUM ON</span><i class="fa-solid fa-angle-up"></i>
+        </button>
         <div class="visualwrodWrap">
           <ul class="visualWord">
             <li class="on">
@@ -324,9 +327,7 @@
               <h3>쌍용 더 플래티넘 서면</h3>
             </li>
           </ul>
-          <button class="visualBtn">
-            <span> PLATINUM ON</span><i class="fa-solid fa-angle-up"></i>
-          </button>
+
           <div class="visualHide">
             <div>
               <div class="visualhideTop">
@@ -1326,11 +1327,11 @@
       const t1 = gsap.timeline({
         scrollTrigger: {
           trigger: ".section2",
-          start: "top top", // 섹션2가 화면 맨 위에 닿으면 시작
-          end: "+=3000", // 스크롤을 3000px만큼 내리는 동안 애니메이션 진행 (속도 조절용)
-          scrub: 1, // 스크롤 했다가 되돌리면 애니메이션도 되감기
-          pin: true, // [핵심] 애니메이션 끝날 때까지 섹션2를 화면에 고정!
-          markers: false, // 개발 끝나면 false로 변경
+          start: "top top",
+          end: "+=3000",
+          scrub: 1,
+          pin: true,
+          markers: false,
         },
       });
 
@@ -1352,12 +1353,7 @@
         duration: 0.3,
       });
 
-      // 비디오를 아래에서 위로 올리기
-      t1.fromTo(
-        ".sec2videoWrap",
-        { y: 550 }, // 아래에서 시작
-        { y: -150, duration: 0.5 },
-      );
+      t1.fromTo(".sec2videoWrap", { y: 550 }, { y: -150, duration: 0.5 });
 
       t1.set(".section2 .sec2bg", {
         opacity: 1,
@@ -1370,7 +1366,7 @@
           duration: 1,
         },
         "<",
-      ); // 동시에 확대 시작
+      );
 
       t1.to(".sec2word", {
         opacity: 1,

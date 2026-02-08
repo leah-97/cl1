@@ -551,6 +551,10 @@ header.active .headerRight button:hover {
   padding: 3%;
   box-sizing: border-box;
 }
+.slideTop .close2 {
+  display: flex;
+  align-items: center;
+}
 .slideTop .close2 img {
   cursor: pointer;
 }
@@ -2077,10 +2081,10 @@ footer > div:nth-child(2) ul li a:hover {
     display: flex;
     width: 100%;
     height: 700px;
-    padding: 1%;
     gap: 10px;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
   }
   .swiperWrap ul li {
     flex-shrink: 0;
@@ -2219,7 +2223,6 @@ footer > div:nth-child(2) ul li a:hover {
   /*bot2 스와이퍼 버튼*/
   .section1 .bot2 {
     max-width: 70%;
-
     margin: 0px auto;
   }
   .section1 .bot2 ul {
@@ -2302,7 +2305,7 @@ footer > div:nth-child(2) ul li a:hover {
     height: 30vh;
   }
   .section2 .gw > svg {
-    max-width: 350px;
+    max-width: 100%;
     position: relative;
   }
 
@@ -2313,13 +2316,20 @@ footer > div:nth-child(2) ul li a:hover {
     color: #161d27;
     font-weight: 500;
   }
+  .sec2video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .sec2videoWrap {
     width: 450px;
     height: 500px;
-    margin: 0px auto;
     position: sticky;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .sec2videoWrap video {
     width: 100%;
@@ -2724,6 +2734,9 @@ footer > div:nth-child(2) ul li a:hover {
     justify-content: center;
     color: #161d27;
   }
+  .sec5Top div:first-child button span img {
+    display: none;
+  }
 
   .sec5Top .main > li h3 {
     font-size: 2vw;
@@ -2985,6 +2998,10 @@ footer > div:nth-child(2) ul li a:hover {
 }
 
 @media (max-width: 768px) {
+  .visual {
+    height: 100dvh;
+  }
+
   /*header*/
   header {
     width: 100%;
@@ -3122,19 +3139,26 @@ footer > div:nth-child(2) ul li a:hover {
     font-size: 20px;
     font-weight: bold;
   }
+
   /*slideMenu*/
   .slideMenu {
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 100dvh;
     position: fixed;
-    right: -100%;
+    right: 0%;
     top: 0;
     z-index: 1000;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: translateX(100%);
+    align-items: flex-start !important;
   }
+  .slideMenu.active {
+    transform: translateX(0);
+  }
+
   .slideTop {
     display: flex;
     width: 100%;
@@ -3142,8 +3166,13 @@ footer > div:nth-child(2) ul li a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #223d6d;
-    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
+  }
+  .slideTop .close2 {
+    display: flex;
+    align-items: center;
   }
   .slideTop .close2 img {
     cursor: pointer;
@@ -3167,16 +3196,18 @@ footer > div:nth-child(2) ul li a:hover {
     overflow-y: scroll;
   }
   .sldieMid > ul {
-    height: 100%;
+    height: auto;
   }
   .sldieMid > ul > li {
-    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
     border-bottom: 1px solid #ccc;
   }
 
   .sldieMid > ul > li a {
-    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
     font-size: 4vw;
     font-weight: 700;
@@ -3201,7 +3232,7 @@ footer > div:nth-child(2) ul li a:hover {
   }
   /*subImg*/
   .subImg {
-    width: 95%;
+    width: 90%;
     height: 10%;
     margin: 0px auto;
     background-image: url(../img/header_banner_bg.jpg);
@@ -3213,9 +3244,9 @@ footer > div:nth-child(2) ul li a:hover {
     align-items: flex-start;
     justify-content: center;
     border-radius: 10px;
-    padding: 2% 1%;
     color: #fff;
     box-sizing: border-box;
+    padding-left: 5%;
   }
   .subImg span {
     font-size: 3vw;
@@ -3231,7 +3262,8 @@ footer > div:nth-child(2) ul li a:hover {
     height: 8%;
     display: flex;
     justify-content: space-between;
-    padding: 0% 3%;
+    padding-left: 5%;
+    padding-right: 5%;
     box-sizing: border-box;
   }
   .slideBot .Slogo {
@@ -3244,10 +3276,13 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual*/
 
   .visual {
+    position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
+
   .visual .visualbg {
     position: absolute;
     top: 0;
@@ -3297,76 +3332,25 @@ footer > div:nth-child(2) ul li a:hover {
 
   /*visual하단 글씨*/
   .visualwrodWrap {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    z-index: 10;
-    margin-top: 400px;
-    padding: 120px 80px;
-    box-sizing: border-box;
-    color: #fff;
-  }
-
-  .visualWord li {
-    opacity: 0;
-    color: #fff;
-    font-weight: normal;
     position: absolute;
-    left: 50px;
-    top: 200px;
-    transition: 1s;
-    width: 80%;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    padding: 0 5vw;
+    z-index: 10;
+    box-sizing: border-box;
   }
-  .visualWord li.on {
-    opacity: 1;
-  }
-  .visualWord li:first-child {
+  .visualWord {
     display: block;
   }
-  .visualWord li h3 {
-    font-size: 1rem;
-    font-weight: normal;
-  }
-  .visualWord li h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 10px 0px;
-  }
 
-  .visualWord li button {
-    font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 13%;
-    width: 150px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 1%;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-    color: #fff;
-    transition: 0.8s;
-  }
-  .visualWord li button:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #ccc;
-    color: #fff;
-  }
-  .visualWord li button:hover img {
-    filter: none;
-  }
   /*visual 프로그래스 바*/
   .barWrap {
     display: flex;
     width: 35%;
     gap: 40px;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 50px;
   }
   .barWrap li {
@@ -3395,10 +3379,12 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual 플래티넘 버튼*/
   .visualBtn {
     width: 7%;
-    height: 13%;
+    min-width: 50px;
+    height: 10%;
+    max-height: 50px;
     position: absolute;
     right: 2%;
-    bottom: -75px;
+    bottom: 0;
     border: none;
     border-radius: 20px 20px 0px 0px;
     background: linear-gradient(135deg, #30559a, #08154a);
@@ -3413,6 +3399,7 @@ footer > div:nth-child(2) ul li a:hover {
   }
   .visualBtn i {
     padding-left: 0px;
+    font-size: 5vw;
   }
   /*visual 플래티넘 버튼 팝업*/
   .visualHide {
@@ -3592,10 +3579,10 @@ footer > div:nth-child(2) ul li a:hover {
     display: flex;
     width: 100%;
     height: 700px;
-    padding: 1%;
     gap: 10px;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
   }
   .swiperWrap ul li {
     flex-shrink: 0;
@@ -3733,14 +3720,20 @@ footer > div:nth-child(2) ul li a:hover {
   }
   /*bot2 스와이퍼 버튼*/
   .section1 .bot2 {
-    min-width: 70%;
+    width: 90%;
     margin: 0px auto;
+    max-width: 100%;
   }
   .section1 .bot2 ul {
     display: flex;
     width: 100%;
-    margin: 50px auto;
-    justify-content: space-between;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .section1 .bot2 ul li:first-child,
+  .section1 .bot2 ul li:last-child {
+    flex: 0 0 50px;
   }
   .section1 .bot2 ul li .cir {
     width: 50px;
@@ -3759,12 +3752,14 @@ footer > div:nth-child(2) ul li a:hover {
     text-align: center;
   }
   .section1 .bot2 ul li:nth-child(2) {
-    display: flex;
-    align-items: center;
+    flex: 1;
+    max-width: 120px;
+    justify-content: center;
   }
   .section1 .bot2 ul li:nth-child(2) .bar2 {
-    max-width: 100px;
+    max-width: 70px;
     height: 3px;
+    flex-shrink: 0;
     background-color: #ccc;
   }
   .section1 .bot2 ul li:nth-child(2) > span:first-child {
@@ -3818,7 +3813,7 @@ footer > div:nth-child(2) ul li a:hover {
     height: 30vh;
   }
   .section2 .gw > svg {
-    max-width: 350px;
+    max-width: 100%;
     position: relative;
   }
 
@@ -3828,6 +3823,11 @@ footer > div:nth-child(2) ul li a:hover {
     font-weight: 600;
     color: #161d27;
     font-weight: 500;
+  }
+  .sec2video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .sec2videoWrap {
     width: 400px;
@@ -3852,7 +3852,7 @@ footer > div:nth-child(2) ul li a:hover {
   }
   .section2 .sec2bg {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-image: url("../img/main_brand_bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -3883,18 +3883,21 @@ footer > div:nth-child(2) ul li a:hover {
   }
   .section2 .content-wrapper h2 {
     font-size: 8vw;
-    margin: 2%0%;
+    margin: 2% 0%;
     font-weight: 500;
   }
   .section2 .videowrap2 {
     margin-top: 50px;
     position: relative;
-    width: 380px;
+    width: 100%;
     height: 210px;
     clip-path: inset(0 100% 0 0 round 20px);
   }
   .section2 .videowrap2 img:first-child {
     border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .section2 .videowrap2 img:nth-child(2) {
     position: absolute;
@@ -3990,7 +3993,7 @@ footer > div:nth-child(2) ul li a:hover {
   /*section3 box li*/
   .section3 li:first-child {
     width: 100%;
-    height: 50%;
+    height: 45%;
     background-image: url("../img/main_banner_li01_bg2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -4002,7 +4005,7 @@ footer > div:nth-child(2) ul li a:hover {
   }
   .section3 li:nth-child(2) {
     width: 100%;
-    height: 50%;
+    height: 45%;
     background-image: url("../img/main_banner_li02_bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -4250,7 +4253,9 @@ footer > div:nth-child(2) ul li a:hover {
     justify-content: center;
     color: #161d27;
   }
-
+  .sec5Top div:first-child button span img {
+    display: none;
+  }
   .sec5Top .main > li h3 {
     font-size: 3vw;
     padding: 15px 0px;
