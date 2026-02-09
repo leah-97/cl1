@@ -4355,8 +4355,10 @@ footer > div:nth-child(2) ul li a:hover {
     justify-content: space-between;
     width: 100%;
   }
-  .sec5bot > div > div > div img {
+  .sec5bot > div > div > .sec5Img img {
     display: block;
+    width: 80%;
+    height: 80%;
   }
   .sec5bot > div ul {
     display: flex;
