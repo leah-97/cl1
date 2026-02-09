@@ -47,7 +47,7 @@ $(function () {
     $(".visualBtn").on("click", function () {
       $(this)
         .stop()
-        .animate({ bottom: "-200px" }, 300, function () {});
+        .animate({ bottom: "-100%" }, 300, function () {});
 
       $(".visualHide").show();
       $(".visualHide > div:first-child")
@@ -61,7 +61,7 @@ $(function () {
         .animate({ bottom: "-800px" }, 300, function () {
           $(".visualHide").hide();
         });
-      $(".visualBtn").show().stop().animate({ bottom: "-75px" }, 300);
+      $(".visualBtn").show().stop().animate({ bottom: "0" }, 300);
     });
   });
   /*slide메뉴 */

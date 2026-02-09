@@ -3333,7 +3333,7 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual하단 글씨*/
   .visualwrodWrap {
     position: absolute;
-    bottom: 13dvh;
+    bottom: 20dvh;
     left: 0;
     width: 100%;
     padding: 0 5vw;
@@ -3343,14 +3343,19 @@ footer > div:nth-child(2) ul li a:hover {
   .visualWord {
     display: block;
   }
-
+  .visualWord li {
+    width: 92%;
+  }
+  .visualWord li h3 {
+    word-break: keep-all;
+  }
   /*visual 프로그래스 바*/
   .barWrap {
     display: flex;
-    width: 50%;
+    width: 35%;
     gap: 40px;
     position: absolute;
-    bottom: 5dvh;
+    bottom: 0dvh;
     left: 50px;
   }
   .barWrap li {
@@ -3391,7 +3396,7 @@ footer > div:nth-child(2) ul li a:hover {
     color: #fff;
     font-size: 1.5vw;
     font-weight: bold;
-    padding: 1%;
+    padding: 1% 0%;
     box-sizing: border-box;
   }
   .visualBtn span {
@@ -3404,7 +3409,7 @@ footer > div:nth-child(2) ul li a:hover {
   /*visual 플래티넘 버튼 팝업*/
   .visualHide {
     width: 100%;
-    height: 55%;
+    height: 70%;
     display: none;
   }
   .visualHide > div:first-child {
@@ -3437,16 +3442,15 @@ footer > div:nth-child(2) ul li a:hover {
     border-radius: 0px 0px 5px 5px;
     padding: 1%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column !important;
     box-sizing: border-box;
     background-color: #fff;
     color: #6b7280;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
   }
 
   .visualhideBot .bg {
-    flex: 2 1 60%;
-    height: 50%;
     background-image: url("../img/platinum_on_layer_popup_banner_wrap_bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -3459,25 +3463,29 @@ footer > div:nth-child(2) ul li a:hover {
     box-sizing: border-box;
     border-radius: 10px;
     color: #fff;
-    font-size: 18px;
-    order: 1;
+    font-size: 2.5vw;
+    width: 100% !important;
+    height: calc(100% / 3);
+    flex: 0 0 auto;
   }
   .visualhideBot .bg a {
     display: flex;
+    width: 100%;
     height: 60%;
     justify-content: space-between;
     align-items: center;
   }
+
   .visualhideBot .bg a button {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    width: 20%;
+    min-width: 65px;
     height: 40%;
     border: 1px solid #ccc;
     border-radius: 10px;
     color: #fff;
-    font-size: 16px;
+    font-size: 2.5vw;
   }
   .visualhideBot .bg a button:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -3498,22 +3506,24 @@ footer > div:nth-child(2) ul li a:hover {
   }
 
   .visualhideBot .visit {
-    flex: 1 1 100%;
-    height: 50%;
-    display: flex;
+    width: 100% !important;
+    height: calc(100% / 3);
+    flex: 0 0 auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #555;
-    order: 3;
+    font-size: 2.5vw;
+    order: 2;
   }
   .visualhideBot .visit i {
     padding-right: 10px;
   }
   .visualhideBot .last {
-    height: 50%;
-    order: 2;
-    flex: 1 1 35%;
+    width: 100% !important;
+    height: calc(100% / 3);
+    flex: 0 0 auto;
+    order: 3;
   }
   .visualhideBot .last ul {
     width: 100%;
@@ -3523,6 +3533,7 @@ footer > div:nth-child(2) ul li a:hover {
     width: 100%;
     height: calc(100% / 3);
     border-bottom: 1px solid #ccc;
+    font-size: 2.5vw;
   }
   .visualhideBot .last li:hover {
     color: #6b7280;
@@ -4050,6 +4061,7 @@ footer > div:nth-child(2) ul li a:hover {
     -webkit-backdrop-filter: blur(10px);
     height: 50px;
     width: 20%;
+    min-width: 85px;
     border: 1px solid #fff;
     border-radius: 10px;
     padding: 0px 1%;
@@ -4241,7 +4253,7 @@ footer > div:nth-child(2) ul li a:hover {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    height: 20%;
+    height: 50px;
     width: 20%;
     border-radius: 10px;
     padding: 2%;
