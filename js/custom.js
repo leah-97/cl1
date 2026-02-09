@@ -20,10 +20,15 @@ $(function () {
 
     lastScroll = currentScroll;
   });
-  $(window).on("load", function () {
+  $(window).on("load scroll", function () {
     $("video").each(function () {
       this.muted = true;
-      this.play().catch((err) => console.log("Video play failed:", err));
+      this.playsInline = true;
+      this.loop = true;
+
+      if (this.paused) {
+        this.play().catch((err) => console.log("Video play failed:", err));
+      }
     });
   });
   $(".mainMenu > nav > ul").mouseenter(function () {
